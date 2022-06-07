@@ -1,0 +1,34 @@
+ <div  class="row no-gutters ng-scope">
+        <div class="col-md-7">
+            <div class="card-body">
+                <h6 (click)="routeToDetail(topic.id)" style="cursor: pointer;"
+                
+                    class="card-title text-semibold mb-1 ng-binding">{{topic.title}}</h6>
+                <!-- <h6 class="small text-semibold text-black-50">Antineutron</h6>
+            <p class="card-text text-truncate text-dark m-0">British. Grade 4. </p> -->
+                <div class="spinner-border text-muted spinner-margin avgstarrelated-spinner_347" style="display: none;">
+                </div>
+                <div style="padding-top: .5em" class="topic-ratings d-flex align-items-center ng-clock">
+                    <div id="relatedrating_347" class="star-ratings-readonly relatedrating_347">
+                        <app-star-rating [readonly]="true" [initialStars]="topic.numberOfRatings"></app-star-rating>
+                        <small class="mt-1 ml-2 text-medium"> ({{topic.numberOfRatings}})
+                        </small>
+                    </div>  
+                </div>
+                <p [routerLink]="['/',webConfig.PagesName.TeacherProfile]" [queryParams]="{ id: topic?.contributor }" style="padding-top: 1em" class="card-text"><small class="text-black-50">By : <span
+                            class="ng-binding">{{topic.contributorFullName}}</span>
+                    </small></p>
+            </div>
+        </div>
+        <div class="col-md-5" (click)="routeToDetail(topic.id)">
+            <a  class="d-flex h-100 justify-content-center">
+                <img style="cursor: pointer;"
+                    class="img-fluid" alt=""
+                    src="{{topic.bannerImageUrl}}"
+                    data-themekey="#">
+                <i class="fas fa-2x position-absolute"></i>
+            </a>
+            <span class="topic-level position-absolute badge badge-warning px-2 ng-binding"
+                ng-bind="topic.TopicLevel">{{topic.level}}</span>
+        </div>
+    </div>

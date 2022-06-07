@@ -1,0 +1,40 @@
+<div class="container pt-4 pb-4">
+    <h1 class="mb-4">Administration</h1>
+    <div class="col-12">
+        <div class="row mt-1">
+            <div [routerLink]="['/',pagesLink.schoolManagement]" class="col-3 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Schools</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.curriculumManagement]" class="col-3 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Curriculum</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.gradeManagement]" class="col-3 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Grades</h3>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div [routerLink]="['/',pagesLink.subjectManagement]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Subjects</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.courseManagement]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Courses</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.learningOutcomes]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Learning Outcomes</h3>
+            </div>            
+        </div>
+        <div class="row mt-1">
+            <div [routerLink]="['/',pagesLink.userManagement]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Users</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.curricluaApproverManagement]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">Curriculum Approvers</h3>
+            </div>
+            <div [routerLink]="['/',pagesLink.schoolApproverManagement]" class="col-4 p-4 bg-primary">
+                <h3 class="p-4 text-white text-center">School Approvers</h3>
+            </div>           
+        </div>
+    </div>
+
+
+</div>

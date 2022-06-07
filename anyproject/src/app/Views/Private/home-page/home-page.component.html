@@ -1,0 +1,74 @@
+<app-home-banner></app-home-banner>
+<app-home-tag-container [tagsList]="tagsList"></app-home-tag-container>
+
+<section class="section-padding section-with-bg explore-topic-section overflow-hidden topic-section">
+    <h1 class="page-heading text-center text-semibold">Latest topics</h1>
+    <div class="container-fluid p-0">
+        <div class="row Latestloaded">
+            <div class="col-12">
+                <div class="row" *ngIf="showLatestPreloader" style="margin-left:60px; margin-right:60px;">
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                </div>
+                <owl-carousel-o [options]="customOptions" *ngIf="!showLatestPreloader">
+                    <ng-container *ngFor="let slide of latestTopics">
+                        <ng-template carouselSlide [id]="slide.id.toString()">
+                            <app-topic-search-card [topic]="slide"></app-topic-search-card>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-padding  explore-topic-section overflow-hidden topic-section">
+    <h1 class="page-heading text-center text-semibold">Featured topics</h1>
+    <div class="container-fluid p-0">
+        <div class="row Latestloaded Visited-White-background">
+            <div class="container">
+                <div class="row" *ngIf="showFeaturePreloader" style="margin-left:60px; margin-right:60px;">
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                </div>
+                <owl-carousel-o [options]="customOptions" *ngIf="!showFeaturePreloader">
+                    <ng-container *ngFor="let slide of featuredTopics">
+                        <ng-template carouselSlide [id]="slide.id.toString()">
+                            <app-topic-search-card [topic]="slide"></app-topic-search-card>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section
+    class="section-padding section-with-bg popular-topics explore-topic-section  overflow-hidden topic-section section-color-chng">
+    <h1 class="page-heading text-center text-semibold">Popular topics</h1>
+    <div class="container-fluid p-0">
+
+        <div class="row Popularloaded">
+
+            <div class="col-12">
+                <div class="row" *ngIf="showPopularPreloader" style="margin-left:60px; margin-right:60px;">
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                    <app-loader-card class="col"></app-loader-card>
+                </div>
+                <owl-carousel-o [options]="customOptions" *ngIf="!showPopularPreloader">
+                    <ng-container *ngFor="let slide of popularTopics">
+                        <ng-template carouselSlide [id]="slide.id.toString()">
+                            <app-topic-search-card [topic]="slide">
+                            </app-topic-search-card>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>

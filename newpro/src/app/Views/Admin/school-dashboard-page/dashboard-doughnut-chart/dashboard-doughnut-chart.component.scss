@@ -1,0 +1,26 @@
+::ng-deep {
+    .dognutchart {
+        display: flex;
+        .ngx-charts {
+            zoom: 1;
+        }
+
+        .chart-legend {
+            .legend-labels.horizontal-legend {
+                max-height: 300px !important;
+                overflow: auto !important;
+                float: none;
+                padding-left: 20px;
+                background: white !important;
+                .legend-label {
+                    display: block;
+                    float: left;
+                    width: 40%;
+                    .legend-label-text {
+                        color: black !important;
+                    }
+                }
+            }
+        }
+    }
+}

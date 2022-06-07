@@ -1,0 +1,23 @@
+<mat-form-field class="example-chip-list" appearance="fill">
+  <!-- <mat-label>Add more tags </mat-label> -->
+  <mat-chip-list #chipList aria-label="Fruit selection" style="margin-bottom:10px;"> </mat-chip-list>
+
+  <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)">
+    {{fruit.TagName}}
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+  <div class="d-flex align-items-center">
+    <input placeholder="Add more tags" onfocus="this.value=''" (input)="onChange($event.target)" class="form-control" #keywordsInput
+      [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" [matAutocomplete]="auto">
+    <div class="d-flex"><button (click)="addItemButtonClick(keywordsInput.value)" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button></div>
+
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let option of searchTagItems" [value]="option.tagName">
+        {{option.tagName}}
+      </mat-option>
+    </mat-autocomplete>
+  </div>
+
+  <div></div>
+</mat-form-field>

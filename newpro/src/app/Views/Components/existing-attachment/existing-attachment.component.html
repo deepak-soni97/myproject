@@ -1,0 +1,44 @@
+<div *ngIf="!showInList" class="uploaded-filelist d-flex justify-content-start align-items-center flex-wrap">
+    <figure *ngFor="let att of ExistingTopicAttachments" class="position-relative mb-3 mr-4">
+        <a target="_blank" (click)="redirectToPreview(att)"
+            class="rounded border d-flex justify-content-center align-items-center mb-2">
+
+
+            <i [ngClass]="getFileIconCss(att,'resource-type mr-4')"></i>
+
+            <!-- <img ng-if="att.fileextension=='image'" ng-src="{{att.File.thumbnail}}" alt="{{att.Title}}">-->
+        </a>
+        <figcaption class="small text-truncate" [textContent]="att.filename"></figcaption>
+        <a href="javascript:void(0)" *ngIf="ShowDelete" (click)="deleteFileEvent(att)"
+            class="position-absolute rounded-circle remove-file text-center">
+            <i class="fas fa-minus-circle"></i>
+        </a>
+        <a *ngIf="!att.isdownloadable && att.fileextension != '.zip'" href="javascript:void(0);" class="position-absolute download-file text-center"
+            data-toggle="tooltip" title="" data-original-title="Download Restricted">
+            <i class="fas fa-arrow-circle-down disabled"></i>
+        </a>
+        <a *ngIf="att.isdownloadable || att.fileextension == '.zip'" data-toggle="tooltip" title="" data-original-title="Download"
+            (click)="downloadFileEvent(att)" class="position-absolute download-file text-center">
+            <i class="fas fa-arrow-circle-down"></i>
+        </a>
+    </figure>
+</div>
+
+<ul *ngIf="showInList">
+    <li *ngFor="let att of ExistingTopicAttachments" class="d-flex align-items-center py-3">
+
+
+        <i [ngClass]="getFileIconCss(att,'resource-type mr-4')" title="{{att.filename}}"></i>
+
+        <span ng-click="openVideo(att)" (click)="onViewClick(att)" class="resouce-meta flex-1 text-truncate">
+            <h6 class="mb-1" [textContent]="att.filename"></h6>
+        </span>
+        <span class="resource-actions">
+            <a *ngIf="att.fileextension != '.zip'" (click)="redirectToPreview(att)" target="_blank"
+                class="d-inline-block mr-2"><i class="icon-View"></i></a>
+            <a *ngIf="att.isdownloadable || att.fileextension == '.zip'" (click)="downloadFileEvent(att)" class="d-inline-block"><i
+                    class="icon-Download"></i></a>
+        </span>
+    </li>
+
+</ul>

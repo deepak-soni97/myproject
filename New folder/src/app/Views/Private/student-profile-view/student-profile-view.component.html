@@ -1,0 +1,91 @@
+<div *ngIf="userProfile" class="container py-4">
+    <div class="row user-profile-view">
+        <div class="col-lg-2 col-md-3 col-12 text-center mb-4 mb-sm-0">
+            <div class="user-avatar position-relative mb-3">
+                <div class="userAvatar-4x mx-auto">
+                    <img alt="" data-themekey="#"
+                        src="{{userProfile.profilepic || '../../assets/Images/user-icon.jpg'}}">
+                </div>
+
+            </div>
+            <button *ngIf="isEditable" type="button" href="" (click)="editProfile();"
+                class="btn btn-primary mb-3 w-100 px-0 waves-effect waves-light ng-scope"><i
+                    class="fas fa-pen mr-2"></i>Edit Profile</button>
+            <div class="social-links d-flex flex-row flex-sm-column">
+                <a *ngIf="userProfile && userProfile.twiterprofile" href="{{userProfile.twiterprofile}}" type="button"
+                    target="blank"
+                    class="btn btn-outline-primary mb-2 text-capitalize flex-1 waves-effect waves-light ng-scope">
+                    <i class="fab fa-twitter mr-0 mr-sm-2"></i><span class="d-none d-sm-inline-block">Twitter</span>
+                </a>
+                <a *ngIf="userProfile && userProfile.facebookprofile" type="button"
+                    href="{{userProfile.facebookprofile}}" target="blank"
+                    class="btn btn-outline-primary mb-2 text-capitalize flex-1 waves-effect waves-light ng-scope">
+                    <i class="fab fa-facebook-f mr-0 mr-sm-2"></i><span class="d-none d-sm-inline-block">Facebook</span>
+                </a>
+                <a *ngIf="userProfile && userProfile.linkedinprofile" type="button"
+                    href="{{userProfile.linkedinprofile}}" target="blank"
+                    class="btn btn-outline-primary mb-2 text-capitalize flex-1 waves-effect waves-light ng-scope">
+                    <i class="fab fa-linkedin-in mr-0 mr-sm-2"></i><span
+                        class="d-none d-sm-inline-block">Linkedin</span>
+                </a>
+                <a *ngIf="userProfile && userProfile.youtubeprofile" type="button" href="{{userProfile.youtubeprofile}}"
+                    target="blank"
+                    class="btn btn-outline-primary mb-2 text-capitalize flex-1 waves-effect waves-light ng-scope">
+                    <i class="fab fa-youtube mr-0 mr-sm-2"></i><span class="d-none d-sm-inline-block">Youtube</span>
+                </a>
+
+                <a *ngIf="userProfile && userProfile.website" href="{{userProfile.website}}" target="blank"
+                    type="button"
+                    class="btn btn-outline-primary mb-2 text-capitalize flex-1 waves-effect waves-light ng-scope">
+                    <i class="fas fa-link mr-0 mr-sm-2"></i><span class="d-none d-sm-inline-block">Website</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-lg-10 col-md-9 col-12">
+            <h1 class="page-heading mb-2">{{ userProfile.firstname ? (userProfile.firstname+" "+ userProfile.lastname) :
+                userProfile.username }}</h1>
+            <p class="mb-0 ng-binding">Student at {{userProfile.schoolDisplayName}}</p>
+            <p class="mb-0">Email : <a href="" class="ng-binding">{{ userProfile.username || "-" }}</a></p>
+
+            <div class="d-flex justify-content-between align-items-center topic-meta mt-2">
+                <p class="text-medium mt-2 mb-3">
+                    <i class="fas fa-users mr-1 text-warning"></i>
+                    <span class="text-bold mr-1 ng-binding">{{student_Since}}</span> <span
+                        class="font-small text-regular">Student Since (Year)</span>
+                </p>
+                <!-- <p class="text-medium mt-2 mb-3">
+                    <i class="fas fa-play-circle mr-1 text-warning"></i>
+                    <span class="text-bold mr-1 ng-binding">0</span> <span
+                        class="font-small text-regular">Contributions</span>
+                </p>
+                <p class="text-medium mt-2 mb-3">
+
+                </p>
+                <p class="text-medium mt-2 mb-3">
+
+                </p> -->
+
+            </div>
+
+            <!-- <section class="about mt-4">
+                <h5>About Me</h5>
+                <div ng-bind-html="vm.ProfileInfoList.About_Me" class="ng-binding"></div>
+                <p [innerHTML]="userProfile.aboutme">{{userProfile.aboutme}} </p>
+            </section>
+
+            <section class="experties mt-4">
+                <h5>My Expertise</h5>
+                <div ng-bind-html="vm.ProfileInfoList.My_Experties" class="ng-binding"></div>
+
+                <p [innerHTML]="userProfile.myexpertise">{{userProfile.myexpertise}}</p>
+            </section>
+
+            <section class="contributions mt-4">
+                <h5 class="ng-binding">My Contributions (0)</h5>
+                <div class="row mt-4">
+                </div>
+            </section> -->
+        </div>
+    </div>
+</div>

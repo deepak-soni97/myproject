@@ -1,0 +1,41 @@
+body {
+  color: #6a6c6f;
+  background-color: #f1f3f6;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+/* */
+.panel-group {
+  width: 300px;
+}
+
+.list-group-item-success {
+  padding: 1rem 16px !important;
+  background: white !important;
+}
+
+.list-group-item {
+  padding: 0.5rem 16px;
+  border: 0;
+  font-weight: 600;
+}
+
+.SubMenu1 {
+  padding-left: 16px !important;
+}
+
+.SubSubMenu1 {
+  padding-left: 32px !important;
+}
+
+.SubSubSubMenu1 {
+  padding-left: 48px !important;
+}
+
+.SubSubSubMenuItem {
+  padding-left: 64px !important;
+}

@@ -1,0 +1,54 @@
+<ng-select *ngIf="!isOpen" #select [items]="items" [searchable]="searchable" bindLabel="{{bindLabel}}"
+    [closeOnSelect]="closeOnSelect" [clearable]="clearable" (change)="onChange($event)" [multiple]="isMultiple"
+    placeholder="{{placeholder}}" [groupBy]="groupByKey" [readonly]="disabled" [(ngModel)]="selectedItems">
+    <ng-template ng-header-tmp>
+        <input style="width: 100%; line-height: 24px" type="text"
+            (input)="select.filter((onSearchInDropdown($event))|| '') " />
+    </ng-template>
+    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+        <div class="d-block" *ngIf="items.length < 4">
+            <span class="ng-value-label" *ngFor="let item of items">{{item.title}},</span>
+        </div>
+        <div *ngIf="items.length >= 4">
+            {{items.length}} items selected
+        </div>
+
+        <!--
+                    <div class="ng-value" *ngFor="let item of items.slice(0,2)">
+            <span class="ng-value-label">{{item.title}}</span>
+        </div>
+
+        <div class="ng-value" *ngIf="items.length > 2">
+            <span class="ng-value-label">{{items.length - 2}} more...</span>
+        </div> -->
+    </ng-template>
+
+</ng-select>
+
+<ng-select *ngIf="isOpen" #select  appendTo="#gradeFilter" [items]="items" [searchable]="searchable" bindLabel="{{bindLabel}}"
+    [closeOnSelect]="closeOnSelect" [clearable]="clearable" (change)="onChange($event)" [multiple]="isMultiple"
+    placeholder="{{placeholder}}" [isOpen]="true" [groupBy]="groupByKey" [readonly]="disabled"
+    [(ngModel)]="selectedItems">
+    <ng-template ng-header-tmp>
+        <input style="width: 100%; line-height: 24px" type="text"
+            (input)="select.filter((onSearchInDropdown($event))|| '') " />
+    </ng-template>
+    <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+        <div class="d-block" *ngIf="items.length < 4">
+            <span class="ng-value-label" *ngFor="let item of items">{{item.title}},</span>
+        </div>
+        <div *ngIf="items.length >= 4">
+            {{items.length}} items selected
+        </div>
+
+        <!--
+                    <div class="ng-value" *ngFor="let item of items.slice(0,2)">
+            <span class="ng-value-label">{{item.title}}</span>
+        </div>
+
+        <div class="ng-value" *ngIf="items.length > 2">
+            <span class="ng-value-label">{{items.length - 2}} more...</span>
+        </div> -->
+    </ng-template>
+
+</ng-select>

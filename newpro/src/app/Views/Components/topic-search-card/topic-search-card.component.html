@@ -1,0 +1,64 @@
+<div *ngIf="topic" class="card topic-card overflow-hidden">
+    <div class="view overlay">
+        <a class="h-100 w-100" [routerLink]="['/',webConfig.PagesName.TopicDetail, topic.id]">
+            <img class="card-img-top" src="{{topic.bannerImageUrl}}" alt="Card image cap">
+        </a>
+        <a [routerLink]="['/',webConfig.PagesName.TopicDetail, topic.id]" class="trigger-info">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+        <span class="topic-level position-absolute badge badge-warning px-2">{{topic.level}}</span>
+    </div>
+    
+    <div class="card-body position-relative pb-2 pt-4">
+        
+        <span class="subject-icon position-absolute">
+            <img width="25" height="25" class="position-relative" style="width: 25px!important; height: 25px!important;"
+                src="{{topic.subjectImageUrl}}" />
+        </span>
+        <a [routerLink]="['/',webConfig.PagesName.TopicDetail, topic.id]">
+            <h6 class="m-0 text-semibold text-truncate">{{topic.title}}</h6>
+        </a>
+        <div style="max-height: 8rem;" class="details overflow-auto mb-3 mt-2">
+            <div class="topic-ratings d-flex align-items-center">
+                <app-star-rating [readonly]="true" [initialStars]="topic.numberOfRatings"></app-star-rating>
+                <small class="mt-1 ml-2 text-medium"> ({{topic.numberOfRatings}})
+                </small>
+            </div>
+            <a [routerLink]="['/',webConfig.PagesName.TeacherProfile]" [queryParams]="{ id: topic?.contributor }">
+                <span class="small text-black-50 mb-2 d-block edu-link"
+                    style="cursor: pointer;color: #007bff!important;">By : {{topic.contributorFullName}}</span></a>
+
+            <span
+                class="small text-primary d-block">{{(topic.curriculum||"").split(",").length>1?'Programs':'Program'}}</span>
+            <p class="font-small tex-medium mb-2" [textContent]="getCurriculumsText(topic)"></p>
+
+            <span class="small text-primary d-block">{{(topic.grades||"").split(",").length>1?'Grades':'Grade'}}</span>
+            <p class="font-small tex-medium mb-2" [textContent]="getGradesText(topic)"></p>
+
+            <span class="small text-primary d-block">Category</span>
+            <p class="font-small tex-medium mb-2" [textContent]="topic.subject"></p>
+
+            <span
+                class="small text-primary d-block">{{(topic.courses||"").split(",").length>1?'Courses':'Course'}}</span>
+            <p class="font-small tex-medium mb-2" [textContent]="getCoursesText(topic)"></p>
+
+            <span class="small text-primary d-block">Description</span>
+            <p class="font-small tex-medium mb-2 line-clamp" [textContent]="topic.description"></p>
+        </div>
+    </div>
+
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+        <a href="#">
+            <i class="fas fa-thumbs-up"></i>
+            <span>{{topic.numberOfLikes}}</span>
+        </a>
+        <a href="#">
+            <i class="icon-Dialogue"></i>
+            <span>{{topic.numberOfComments}}</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-eye"></i>
+            <span>{{topic.numberOfViews}}</span>
+        </a>
+    </div>
+</div>

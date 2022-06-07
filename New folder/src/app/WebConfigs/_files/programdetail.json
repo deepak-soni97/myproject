@@ -1,0 +1,2893 @@
+[
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "af3d7b06-8819-468b-ae9a-396f60afc089",
+        "odata.etag": "\"12\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(15)",
+        "Id": 15,
+        "Title": "A Level",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 15,
+        "$$hashKey": "object:11",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "8fed8693-aaea-4aee-8137-2ae666e178d8",
+                "odata.etag": "\"20\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(91)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(91)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "1bb2cde0-9b5a-4610-9305-b8a7b2ae3e55",
+                    "ID": 15,
+                    "Title": "A Level"
+                },
+                "Id": 91,
+                "Title": "12",
+                "zghw": "YR-12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 91,
+                "$$hashKey": "object:39",
+                "Courses": [
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "5fd77f73-042c-497a-bbb7-a714c1575af8",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22016)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22016)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "ee215dfb-171b-4781-8a56-edf9866c6082",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22016,
+                        "Title": "Accounting",
+                        "ID": 22016,
+                        "show": true,
+                        "$$hashKey": "object:208",
+                        "Topics": []
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "b4a88cc2-c31c-406f-8f44-c7641dde05f5",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22017)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22017)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "177bf3f5-e1d2-4ce3-9479-6cffa9411866",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22017,
+                        "Title": "Afrikaans",
+                        "ID": 22017,
+                        "show": true,
+                        "$$hashKey": "object:209"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "2e443d3d-8e33-4387-b9dc-295bc8042588",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22018)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22018)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "6e332060-4890-45e6-b965-2815666d866a",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22018,
+                        "Title": "Arabic",
+                        "ID": 22018,
+                        "show": true,
+                        "$$hashKey": "object:210"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "6e0179df-9ced-4164-9545-75e3ec439b6d",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22019)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22019)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "f0448b7c-881d-4c71-bc13-793ffb8479b0",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22019,
+                        "Title": "Art and Design",
+                        "ID": 22019,
+                        "show": true,
+                        "$$hashKey": "object:211"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "6ae296ed-d763-4db0-8229-6718a49b0720",
+                        "odata.etag": "\"1\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23249)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23249)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "8f2ee81f-f7be-485e-89eb-b56a1f1d275b",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 23249,
+                        "Title": "Artificial Intelligence",
+                        "ID": 23249,
+                        "show": true,
+                        "$$hashKey": "object:212"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "705c4693-7860-4ef6-a8ba-2c759d9b11a0",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22020)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22020)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "5c61aacd-da9a-453f-be2b-5009e7d6f455",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22020,
+                        "Title": "Biblical Studies",
+                        "ID": 22020,
+                        "show": true,
+                        "$$hashKey": "object:213"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "d6f7a586-041c-499b-8814-efbb14438d04",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22021)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22021)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "7e50445c-c874-4a29-bcc0-40b3166f4fdc",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22021,
+                        "Title": "Biology",
+                        "ID": 22021,
+                        "show": true,
+                        "$$hashKey": "object:214"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "d18aa49b-0c10-4e18-ac18-26238e8fb3cf",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22022)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22022)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "2b8c70cd-5d34-4a04-8422-f02c8c8738b8",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22022,
+                        "Title": "Business",
+                        "ID": 22022,
+                        "show": true,
+                        "$$hashKey": "object:215"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "52668f69-cf0a-49c0-b6b3-d9ecc55f136c",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22023)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22023)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "66af0f5b-c873-44aa-b78e-e912c6df93ff",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22023,
+                        "Title": "Chemistry",
+                        "ID": 22023,
+                        "show": true,
+                        "$$hashKey": "object:216"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "62164f1e-bdc0-433a-b081-6ae2725094dc",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22024)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22024)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "aebac87e-c72b-4e91-a2d1-313dd3ce4a0e",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22024,
+                        "Title": "Chinese",
+                        "ID": 22024,
+                        "show": true,
+                        "$$hashKey": "object:217"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "707ea448-e45b-4b41-a540-32bedc588d20",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22025)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22025)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "7f8dc8fd-4bb6-4c55-a074-9401b803cd32",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22025,
+                        "Title": "Classical Studies",
+                        "ID": 22025,
+                        "show": true,
+                        "$$hashKey": "object:218"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "a55db753-333f-4f8c-ab5b-86e20da76e42",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22026)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22026)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "788111c5-fb82-4bcf-8993-4349294d5374",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22026,
+                        "Title": "Computer Science",
+                        "ID": 22026,
+                        "show": true,
+                        "$$hashKey": "object:219"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "10d926ab-9444-44b4-9ee6-f54bf184d026",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22027)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22027)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "fd88466b-497a-46fa-9bd2-5ace5295e13b",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22027,
+                        "Title": "Design & Technology",
+                        "ID": 22027,
+                        "show": true,
+                        "$$hashKey": "object:220"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "904c3e0e-bf21-480c-84c8-d48ee69dc5c9",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22028)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22028)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "3b1dddf3-1acb-4e91-8c1c-2b385861d9ee",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22028,
+                        "Title": "Design & Textiles",
+                        "ID": 22028,
+                        "show": true,
+                        "$$hashKey": "object:221"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "1dec568a-dd6f-4f9f-a79a-7cbef58f9193",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22029)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22029)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "42007696-bb6d-42b2-a913-bdda6f868474",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22029,
+                        "Title": "Digital Media & Design",
+                        "ID": 22029,
+                        "show": true,
+                        "$$hashKey": "object:222"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "98921062-320a-4ced-83a5-6562ed07312c",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22030)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22030)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "6e550d4f-843d-4ea5-a09b-3851c9427234",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22030,
+                        "Title": "Divinity",
+                        "ID": 22030,
+                        "show": true,
+                        "$$hashKey": "object:223"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "5c5eb5dd-f542-4303-b49c-3bd4917c6ed8",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22031)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22031)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "fd9d6889-25d3-4e37-810a-5c566a585990",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22031,
+                        "Title": "Drama",
+                        "ID": 22031,
+                        "show": true,
+                        "$$hashKey": "object:224"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "3710b61d-915d-40b0-95e9-149f1994be9c",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22032)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22032)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "6efd8c71-255b-4c45-9e30-1ddae5759f18",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22032,
+                        "Title": "Economics",
+                        "ID": 22032,
+                        "show": true,
+                        "$$hashKey": "object:225"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "1f850cd4-9fb6-4dff-ba2f-96bdf2091404",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22033)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22033)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "78fb367e-dd91-47ae-9d12-4cb7afa672be",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22033,
+                        "Title": "English - Language",
+                        "ID": 22033,
+                        "show": true,
+                        "$$hashKey": "object:226"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "0dcac245-dea6-4c8b-8df5-ae94406a7e71",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22034)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22034)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "3927d3f8-fa79-485d-ad58-0af5bcacc135",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22034,
+                        "Title": "English - Literature",
+                        "ID": 22034,
+                        "show": true,
+                        "$$hashKey": "object:227"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "93e5a9d5-7202-464b-b4be-71e0caaf77c0",
+                        "odata.etag": "\"1\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23250)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23250)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "54bc7c70-8538-4bc8-a040-6203001e57fb",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 23250,
+                        "Title": "Environmental Management",
+                        "ID": 23250,
+                        "show": true,
+                        "$$hashKey": "object:228"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "9ba0bc1d-3826-4202-9ede-48733b2ced88",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22035)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22035)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "ddcf014c-1ed9-4d7e-b1a3-b7d2b890e83a",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22035,
+                        "Title": "French",
+                        "ID": 22035,
+                        "show": true,
+                        "$$hashKey": "object:229"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "573b5245-366d-4666-8a28-f1b84803559f",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22036)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22036)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "a4f8c695-0374-40ef-9ca0-1ab9333c40bd",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22036,
+                        "Title": "Geography",
+                        "ID": 22036,
+                        "show": true,
+                        "$$hashKey": "object:230"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "f7090976-57fc-4933-96ff-16b5bb47056f",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22037)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22037)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "258e2741-8a05-4c05-b7a3-24a617d123ee",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22037,
+                        "Title": "German",
+                        "ID": 22037,
+                        "show": true,
+                        "$$hashKey": "object:231"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "8a10ff31-5462-47f9-ae5a-43fab9764782",
+                        "odata.etag": "\"4\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22038)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22038)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "6c37f594-ae45-4d9b-a875-0f9b656e1be8",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22038,
+                        "Title": "Global Perspectives & Research",
+                        "ID": 22038,
+                        "show": true,
+                        "$$hashKey": "object:232"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "ee282e76-521b-476e-adb5-a2ffb48be905",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22039)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22039)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "907ae00b-e271-4f3d-aa10-3513f12b54ac",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22039,
+                        "Title": "Hindi",
+                        "ID": 22039,
+                        "show": true,
+                        "$$hashKey": "object:233"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "f3dba3fb-bf64-4396-bba2-44e842c659bb",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22040)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22040)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "ed4195db-5cc2-426d-bec7-80a0c546cf3b",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22040,
+                        "Title": "Hinduism",
+                        "ID": 22040,
+                        "show": true,
+                        "$$hashKey": "object:234"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "7ff2904c-8c71-493f-b35f-8221fccdbb16",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22041)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22041)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "1a8b0b68-80b9-4c5c-bbdb-8599d9d7e6df",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22041,
+                        "Title": "History",
+                        "ID": 22041,
+                        "show": true,
+                        "$$hashKey": "object:235"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "9aa749ca-8f4a-4ab5-b2ba-3cff4af7963c",
+                        "odata.etag": "\"1\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23251)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23251)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "39d5d922-e7ae-4c24-ac92-475a4b5c39dc",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 23251,
+                        "Title": "ICT",
+                        "ID": 23251,
+                        "show": true,
+                        "$$hashKey": "object:236"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "81f94b3f-76d3-4f97-b5fa-b3149d515cbf",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22042)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22042)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "f7160cb4-4927-442e-bc52-3a5511dce759",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22042,
+                        "Title": "Information Technology",
+                        "ID": 22042,
+                        "show": true,
+                        "$$hashKey": "object:237"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "6aede731-5622-47dc-98ed-95c5e7bd6c61",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22043)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22043)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "90a08c8c-0297-4d2c-a326-3e448bf7f962",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22043,
+                        "Title": "Islamic Studies",
+                        "ID": 22043,
+                        "show": true,
+                        "$$hashKey": "object:238"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "6be8c7fa-5814-47f1-97ad-355a578ba100",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22044)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22044)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "14e400a5-73b4-4fa7-acba-d0dd6d2b13bd",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22044,
+                        "Title": "Law",
+                        "ID": 22044,
+                        "show": true,
+                        "$$hashKey": "object:239"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "041f8805-48c0-4bd8-b9b3-fea2fa3b797e",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22045)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22045)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "9883787a-af64-4461-baeb-43d5f91a10a1",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22045,
+                        "Title": "Marine Science",
+                        "ID": 22045,
+                        "show": true,
+                        "$$hashKey": "object:240"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "2de43b0a-2835-420c-b2aa-d1e1100bc949",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22046)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22046)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "99f4aada-c24b-4384-b3a0-6a47d254eb59",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22046,
+                        "Title": "Mathematics",
+                        "ID": 22046,
+                        "show": true,
+                        "$$hashKey": "object:241"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "61ef7704-4fa9-47fd-b9e2-b1a8721ec999",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22047)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22047)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "debf05a2-ec24-47e1-905c-17ac3f167e5d",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22047,
+                        "Title": "Mathematics - Further",
+                        "ID": 22047,
+                        "show": true,
+                        "$$hashKey": "object:242"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "9d610058-1d8d-4251-be22-14abbe82592a",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22048)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22048)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "e021bbeb-b3cd-427f-92c4-1bfa587d8399",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22048,
+                        "Title": "Media Studies",
+                        "ID": 22048,
+                        "show": true,
+                        "$$hashKey": "object:243"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "fca4be03-7891-40e8-ac59-a33f9a0a41b2",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22049)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22049)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "97acc5b1-0553-441a-9f57-17372098008a",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22049,
+                        "Title": "Music",
+                        "ID": 22049,
+                        "show": true,
+                        "$$hashKey": "object:244"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "1150a798-8391-41ac-b054-76475c64051c",
+                        "odata.etag": "\"1\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23252)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23252)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "20b0780d-208c-4396-9bf5-464838334a02",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 23252,
+                        "Title": "Photography",
+                        "ID": 23252,
+                        "show": true,
+                        "$$hashKey": "object:245"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "c9f3c56e-e766-4d39-b0cc-2ddc88b4ee92",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22050)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22050)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "53396438-1384-48f2-a6a1-f95a6e208df8",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22050,
+                        "Title": "Physical Education",
+                        "ID": 22050,
+                        "show": true,
+                        "$$hashKey": "object:246"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "97ebf622-6965-4bac-930e-b7bfb8af2d5c",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22051)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22051)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "4cdc6505-225c-4928-9c9d-ac6988bd5745",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22051,
+                        "Title": "Physics",
+                        "ID": 22051,
+                        "show": true,
+                        "$$hashKey": "object:247"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "feca6a65-8ea8-406e-8fa8-39b692ba8623",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22052)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22052)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "fca64365-3c81-4d5f-95a2-309d3f4885cf",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22052,
+                        "Title": "Portuguese",
+                        "ID": 22052,
+                        "show": true,
+                        "$$hashKey": "object:248"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "22dc5f4f-f258-4316-8860-9ae142cef404",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22053)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22053)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "d430166c-4d04-49ac-807e-ed44da65c30c",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22053,
+                        "Title": "Psychology",
+                        "ID": 22053,
+                        "show": true,
+                        "$$hashKey": "object:249"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "9123dfa8-1210-482f-898b-6e6729ce84b8",
+                        "odata.etag": "\"1\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23253)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(23253)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "9260f746-3b63-43b1-89e4-3d9c1e2b2b91",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 23253,
+                        "Title": "Robotics",
+                        "ID": 23253,
+                        "show": true,
+                        "$$hashKey": "object:250"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "8397e470-70a8-4960-b816-e7edb53a2105",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22054)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22054)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "eef6607d-58e2-4e80-ad57-4e880718f577",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22054,
+                        "Title": "Sociology",
+                        "ID": 22054,
+                        "show": true,
+                        "$$hashKey": "object:251"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "cfba20b7-14f0-46c4-a9b5-c85fa9cbba67",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22055)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22055)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "0f60ce7c-20e9-4dee-8956-c162f4306e5b",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22055,
+                        "Title": "Spanish",
+                        "ID": 22055,
+                        "show": true,
+                        "$$hashKey": "object:252"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "3cb9cac2-6119-4c3d-be9e-381a9142d333",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22056)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22056)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "61169938-41bb-4868-b601-800dc50335e7",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22056,
+                        "Title": "Tamil",
+                        "ID": 22056,
+                        "show": true,
+                        "$$hashKey": "object:253"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "452b4b90-a61c-488e-9641-65ca625a963c",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22057)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22057)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "af0bcdde-60fd-4a7c-b453-b055cbbf352e",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22057,
+                        "Title": "Thinking Skills",
+                        "ID": 22057,
+                        "show": true,
+                        "$$hashKey": "object:254"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "0b31f095-eb22-4890-8a92-03823259644e",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22058)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22058)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "19d67ebe-0da7-4a8b-9b0c-803d9deef0fd",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22058,
+                        "Title": "Travel and Tourism",
+                        "ID": 22058,
+                        "show": true,
+                        "$$hashKey": "object:255"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "ae67fab9-7889-473f-8b43-97c324445e68",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22060)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22060)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "c98738b6-6ec0-484f-9f0d-5645794b3630",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22060,
+                        "Title": "Urdu",
+                        "ID": 22060,
+                        "show": true,
+                        "$$hashKey": "object:256"
+                    },
+                    {
+                        "odata.type": "SP.Data.CoursesListItem",
+                        "odata.id": "6bb19b31-7953-45b6-8990-2bb81150cb73",
+                        "odata.etag": "\"3\"",
+                        "odata.editLink": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22059)",
+                        "Grade@odata.navigationLinkUrl": "Web/Lists(guid'edc0d4ba-8eec-45b2-96c6-448f6592dfc2')/Items(22059)/Grade",
+                        "Grade": {
+                            "odata.type": "SP.Data.GradesListItem",
+                            "odata.id": "d82946fe-d82e-4f47-afeb-fa38c9fc902f",
+                            "ID": 91,
+                            "zghw": "YR-12"
+                        },
+                        "Id": 22059,
+                        "Title": "Urdu - Pakistan only",
+                        "ID": 22059,
+                        "show": true,
+                        "$$hashKey": "object:257"
+                    }
+                ]
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "17da4cc1-191b-4980-85aa-dde17f615b07",
+                "odata.etag": "\"21\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(92)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(92)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4245a884-abcf-4ea5-ac76-af30ecd4abf4",
+                    "ID": 15,
+                    "Title": "A Level"
+                },
+                "Id": 92,
+                "Title": "13",
+                "zghw": "YR-13",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 92,
+                "$$hashKey": "object:40"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "25fa81a5-4a7c-41cc-b42e-cf52b69c3c2d",
+        "odata.etag": "\"12\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(5)",
+        "Id": 5,
+        "Title": "American",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 5,
+        "$$hashKey": "object:12",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "53d07c98-9e13-407a-9441-35a3ed4e96e9",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(16)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(16)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "3546a4c0-cb11-4f99-9a6d-b0b9efd1f2c0",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 16,
+                "Title": "PK",
+                "zghw": "Pre-K",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 16,
+                "$$hashKey": "object:43"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "2284bc44-7af2-4a2d-92b7-a4550b50eb86",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(14)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(14)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e17416a0-6311-4a0c-82d5-68cb8b0910db",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 14,
+                "Title": "KG1",
+                "zghw": "KG1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 14,
+                "$$hashKey": "object:44"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "2f8152dc-69de-4299-91b1-f963f30a9085",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(15)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(15)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6a0190ee-1043-43e5-92dd-2f436273ca61",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 15,
+                "Title": "KG2",
+                "zghw": "KG2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 15,
+                "$$hashKey": "object:45"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "6fc53ec6-cb5d-4e07-9286-84d2e479d343",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(1)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(1)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "5da7c1f3-8537-4a56-883f-1efde300708c",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 1,
+                "Title": "1",
+                "zghw": "Grade-1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 1,
+                "$$hashKey": "object:46"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "cf3d6ad8-f327-4612-a796-f4e63c7fe906",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(2)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(2)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e6799e93-a857-4e62-aa10-e52664249552",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 2,
+                "Title": "2",
+                "zghw": "Grade-2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 2,
+                "$$hashKey": "object:47"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "49445621-5bea-45a9-be01-8fa34b85cb2b",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(3)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(3)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "ed17944b-44de-45c5-9391-95026643935e",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 3,
+                "Title": "3",
+                "zghw": "Grade-3",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 3,
+                "$$hashKey": "object:48"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "8ae0f4d2-7b09-42e8-b09b-81440007b554",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(4)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(4)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4df3e039-6dd5-455f-952b-96278e00e1b0",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 4,
+                "Title": "4",
+                "zghw": "Grade-4",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 4,
+                "$$hashKey": "object:49"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "f6d5bbb2-3074-48f5-a419-bc03495b24d2",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(5)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(5)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "2979a3d7-9c15-4d0e-96f2-ccb88efb8947",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 5,
+                "Title": "5",
+                "zghw": "Grade-5",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 5,
+                "$$hashKey": "object:50"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "9b4f0785-143d-47b3-b51f-9bb92aa49d03",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(6)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(6)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e85e36b6-3fa5-45ef-8bcb-c7499ef8e695",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 6,
+                "Title": "6",
+                "zghw": "Grade-6",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 6,
+                "$$hashKey": "object:51"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "8a44cb85-09d2-49ec-a669-e68e5590237c",
+                "odata.etag": "\"12\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(7)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(7)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6cf73976-e617-405b-af1c-bb354ca1d2db",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 7,
+                "Title": "7",
+                "zghw": "Grade-7",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 7,
+                "$$hashKey": "object:52"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "924ca86e-b76a-466d-b293-5bc170b098aa",
+                "odata.etag": "\"12\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(8)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(8)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "eb996b59-4cea-40ec-8938-2b4eacb2f78e",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 8,
+                "Title": "8",
+                "zghw": "Grade-8",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 8,
+                "$$hashKey": "object:53"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "6e50839a-129a-4c77-a22a-661a1e4eeb12",
+                "odata.etag": "\"12\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(9)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(9)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "20dac056-e5f9-4b2d-9a83-50bd59c9c5ab",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 9,
+                "Title": "9",
+                "zghw": "Grade-9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 9,
+                "$$hashKey": "object:54"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "a5154eb1-c46e-4714-b2e6-053413bd1cfd",
+                "odata.etag": "\"12\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(10)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(10)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4d388642-d55e-4d43-beff-5b36acb8374c",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 10,
+                "Title": "10",
+                "zghw": "Grade-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 10,
+                "$$hashKey": "object:55"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "db8672a9-701f-413e-929a-f233ab75b61f",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(11)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(11)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e1dc5fe5-5d9e-4b71-a1d4-47fa9e5022fa",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 11,
+                "Title": "11",
+                "zghw": "Grade-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 11,
+                "$$hashKey": "object:56"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "8aeae476-f30b-408a-bd0b-a82dd97d23c4",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(12)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(12)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "7bb44717-5dbf-4ab1-841e-f65227a9d8e7",
+                    "ID": 5,
+                    "Title": "American"
+                },
+                "Id": 12,
+                "Title": "12",
+                "zghw": "Grade-12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 12,
+                "$$hashKey": "object:57"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "3da6763f-ea7e-4809-b829-0d67ae2dc4b3",
+        "odata.etag": "\"12\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(13)",
+        "Id": 13,
+        "Title": "AP",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 13,
+        "$$hashKey": "object:13",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "eeddcb5b-514c-4a6d-82ce-27e86f852c0d",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(99)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(99)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "a7777085-5252-4de0-9e6f-512158db814e",
+                    "ID": 13,
+                    "Title": "AP"
+                },
+                "Id": 99,
+                "Title": "9",
+                "zghw": "9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 99,
+                "$$hashKey": "object:73"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "be3abdb6-959a-4be6-b110-73ad56238e75",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(100)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(100)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "c2a860d7-f991-4280-a0fd-6d537dda9b1b",
+                    "ID": 13,
+                    "Title": "AP"
+                },
+                "Id": 100,
+                "Title": "10",
+                "zghw": "10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 100,
+                "$$hashKey": "object:74"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "98a35f08-7c72-4052-bd02-9c01687aa911",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(101)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(101)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "fdef24a1-27a2-4b68-843e-96cc4c5b26d6",
+                    "ID": 13,
+                    "Title": "AP"
+                },
+                "Id": 101,
+                "Title": "11",
+                "zghw": "11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 101,
+                "$$hashKey": "object:75"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "5ee9b139-f15e-48b8-b576-30308707b224",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(102)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(102)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6ec972e3-36aa-483b-9345-994570d8fc9d",
+                    "ID": 13,
+                    "Title": "AP"
+                },
+                "Id": 102,
+                "Title": "12",
+                "zghw": "12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 102,
+                "$$hashKey": "object:76"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "8cc12bd8-c6aa-4973-b6f3-bc2a743418b7",
+        "odata.etag": "\"12\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(16)",
+        "Id": 16,
+        "Title": "AS Level",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 16,
+        "$$hashKey": "object:14",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "c14938f2-16c4-4e4e-a006-61a371e9fdf4",
+                "odata.etag": "\"22\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(93)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(93)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "b4c284ae-60c2-412d-af71-1c01f0089ee4",
+                    "ID": 16,
+                    "Title": "AS Level"
+                },
+                "Id": 93,
+                "Title": "12",
+                "zghw": "YR-12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 93,
+                "$$hashKey": "object:81"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "b79fc716-91b8-43f2-afec-e1a43b1768ad",
+                "odata.etag": "\"20\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(94)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(94)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4f418095-baaf-45a5-b629-b5a7601d5004",
+                    "ID": 16,
+                    "Title": "AS Level"
+                },
+                "Id": 94,
+                "Title": "13",
+                "zghw": "YR-13",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 94,
+                "$$hashKey": "object:82"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "b37922c3-f802-4cd2-a998-822ff9eb4ab2",
+        "odata.etag": "\"23\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(8)",
+        "Id": 8,
+        "Title": "British",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 8,
+        "$$hashKey": "object:15",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "fadb5acb-2a4f-449c-97ea-7281b91d915c",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(122)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(122)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e06145a8-f021-416f-9b10-35cc09e412b0",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 122,
+                "Title": "KG1",
+                "zghw": "FS-1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 122,
+                "$$hashKey": "object:85"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "6aa02945-e4c2-4b39-8bab-e3009861948c",
+                "odata.etag": "\"9\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(123)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(123)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "f3c07e2f-93bc-407b-ae0a-897b2ef9daac",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 123,
+                "Title": "KG2",
+                "zghw": "FS-2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 123,
+                "$$hashKey": "object:86"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "530d5188-6d09-44e8-9259-8d9b715da7e5",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(109)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(109)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "9c186eca-f9e7-4fa0-8547-6852b1b61de2",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 109,
+                "Title": "1",
+                "zghw": "YR-1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 109,
+                "$$hashKey": "object:87"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "2aea700e-ce48-4115-9cc2-c19a86076e76",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(110)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(110)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "749e63d5-9dd5-4c8a-a2ff-f8ea71e005f0",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 110,
+                "Title": "2",
+                "zghw": "YR-2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 110,
+                "$$hashKey": "object:88"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "aa47749f-67bd-4828-b901-d223bd38d6e7",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(111)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(111)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "99ad679d-20a6-4c6b-aa19-9d7b84042390",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 111,
+                "Title": "3",
+                "zghw": "YR-3",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 111,
+                "$$hashKey": "object:89"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "280edf0b-0194-4483-9169-69aaee08cf12",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(112)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(112)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e757670c-74f6-4d59-af15-c7a4ff9e6244",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 112,
+                "Title": "4",
+                "zghw": "YR-4",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 112,
+                "$$hashKey": "object:90"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "e4b5e5e5-f561-4cf0-ad17-550d2038a4c8",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(113)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(113)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "a3cf1707-3239-4fbb-bfde-f34c467872a3",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 113,
+                "Title": "5",
+                "zghw": "YR-5",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 113,
+                "$$hashKey": "object:91"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "22c97235-2158-46d5-8102-d49bc74f9026",
+                "odata.etag": "\"11\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(114)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(114)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "83b8d29c-5212-4fbb-b3c7-2db50d67b045",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 114,
+                "Title": "6",
+                "zghw": "YR-6",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 114,
+                "$$hashKey": "object:92"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "f4fe6753-7f45-439e-9af0-82514d41af15",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(115)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(115)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "291e1ea5-23fd-42a8-b57e-80d9db9f1cff",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 115,
+                "Title": "7",
+                "zghw": "YR-7",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 115,
+                "$$hashKey": "object:93"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "d895614c-d879-4195-baa4-f5ef0cc1be3a",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(116)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(116)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "b4b43882-3c9d-4667-aa98-da1757848ae3",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 116,
+                "Title": "8",
+                "zghw": "YR-8",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 116,
+                "$$hashKey": "object:94"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "b543c861-cc42-4195-9951-e2fb55ead2a5",
+                "odata.etag": "\"10\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(117)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(117)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "5a9073ac-3317-42f2-bce9-b1bfa9d4065d",
+                    "ID": 8,
+                    "Title": "British"
+                },
+                "Id": 117,
+                "Title": "9",
+                "zghw": "YR-9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 117,
+                "$$hashKey": "object:95"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "a36513c6-519e-46ec-9030-ebc9a8b1b3b4",
+        "odata.etag": "\"6\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(17)",
+        "Id": 17,
+        "Title": "BTEC",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 17,
+        "$$hashKey": "object:16",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "977f8ce9-9ecc-4682-8b0a-ccd63ca43ea7",
+                "odata.etag": "\"12\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(75)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(75)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "2e4fc785-d5e7-4fba-937b-1f053a9661f6",
+                    "ID": 17,
+                    "Title": "BTEC"
+                },
+                "Id": 75,
+                "Title": "10",
+                "zghw": "YR-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 75,
+                "$$hashKey": "object:107"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "0b487979-29f9-4bf5-b9f4-c4942fd183d5",
+                "odata.etag": "\"14\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(76)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(76)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "fcb27624-0f85-4be8-874c-3d0e96cbab5e",
+                    "ID": 17,
+                    "Title": "BTEC"
+                },
+                "Id": 76,
+                "Title": "11",
+                "zghw": "YR-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 76,
+                "$$hashKey": "object:108"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "e36cf2ca-af9f-4e09-9784-6a2f8ceaf0e3",
+        "odata.etag": "\"11\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(3)",
+        "Id": 3,
+        "Title": "CBSE",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 3,
+        "$$hashKey": "object:17",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "7fe49ffc-5ced-4af4-b7cc-54802a0e561b",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(32)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(32)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "d382db6c-364e-43fd-9110-bc2300d2dd0d",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 32,
+                "Title": "KG1",
+                "zghw": "KG1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 32,
+                "$$hashKey": "object:111"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "41940a12-d461-4273-a5fe-d2b7ac96256e",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(33)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(33)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "945e8457-0f6a-4cff-9d05-13c626bd33f8",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 33,
+                "Title": "KG2",
+                "zghw": "KG2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 33,
+                "$$hashKey": "object:112"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "c1c3264e-f938-4e94-aebe-9dcfcbee2c72",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(19)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(19)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6e97257b-51c6-499c-9991-e3d8cda68d29",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 19,
+                "Title": "1",
+                "zghw": "Grade-1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 19,
+                "$$hashKey": "object:113"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "b472f327-b16c-402c-bc94-a68459d5080a",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(20)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(20)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "a5036a93-ffac-4226-9361-07b4a08e6548",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 20,
+                "Title": "2",
+                "zghw": "Grade-2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 20,
+                "$$hashKey": "object:114"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "c25a2009-06e9-4f88-a6aa-c2f71476a7fa",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(21)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(21)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "afb17b23-74e1-4769-bad5-fc3f1539a2f2",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 21,
+                "Title": "3",
+                "zghw": "Grade-3",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 21,
+                "$$hashKey": "object:115"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "26869637-a122-4694-85a9-dfd07138bd73",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(22)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(22)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "0ec83b74-f783-4af0-812c-9275c207b925",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 22,
+                "Title": "4",
+                "zghw": "Grade-4",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 22,
+                "$$hashKey": "object:116"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "0743a196-edb8-446d-8b6e-eb8c30448d90",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(23)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(23)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e9ad4add-2a6d-48ed-a92e-5038051ffdf4",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 23,
+                "Title": "5",
+                "zghw": "Grade-5",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 23,
+                "$$hashKey": "object:117"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "9a557eed-5369-498e-bce3-99f25a20a0bf",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(24)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(24)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "ce1a1a05-0b44-4617-8d8c-c2e60ea61bec",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 24,
+                "Title": "6",
+                "zghw": "Grade-6",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 24,
+                "$$hashKey": "object:118"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "caf93f6b-5feb-4a50-86c8-a70dcbb046ee",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(25)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(25)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "d1e0da18-7b0e-4f8a-bc23-0a9f735f51c9",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 25,
+                "Title": "7",
+                "zghw": "Grade-7",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 25,
+                "$$hashKey": "object:119"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "7678e6b4-c398-492d-97f2-a0cb5c233aa6",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(26)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(26)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "fc4ca7e5-af1a-4063-bb6c-c386c1d43c46",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 26,
+                "Title": "8",
+                "zghw": "Grade-8",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 26,
+                "$$hashKey": "object:120"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "dad26bab-0231-401b-bafc-eb120254e9d6",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(27)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(27)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4c869328-8e0a-4099-bd7f-0f53c3a400d4",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 27,
+                "Title": "9",
+                "zghw": "Grade-9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 27,
+                "$$hashKey": "object:121"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "c1883b3c-668e-48f5-adae-a9e9beb54bc7",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(28)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(28)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "ce18ba51-bb5c-4223-9a58-38da37f18afb",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 28,
+                "Title": "10",
+                "zghw": "Grade-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 28,
+                "$$hashKey": "object:122"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "991458cf-bf84-4fa8-a675-1029638bc8ca",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(29)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(29)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "8264fe09-af66-4bb8-8ede-7206b9f963b6",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 29,
+                "Title": "11",
+                "zghw": "Grade-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 29,
+                "$$hashKey": "object:123"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "7a0fb2b1-476d-4cd3-a556-a468e84c0182",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(30)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(30)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6f95eb4c-00d1-4d6c-926d-69ff22f9bcdb",
+                    "ID": 3,
+                    "Title": "CBSE"
+                },
+                "Id": 30,
+                "Title": "12",
+                "zghw": "Grade-12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 30,
+                "$$hashKey": "object:124"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "486f9c32-8389-4b0f-85c8-9617c721faf2",
+        "odata.etag": "\"7\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(9)",
+        "Id": 9,
+        "Title": "GCSE",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 9,
+        "$$hashKey": "object:18",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "da0b736b-df65-4e75-a87c-9b83a886626f",
+                "odata.etag": "\"17\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(73)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(73)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "34c0a93e-1f46-4054-bdd5-87b8a6453a92",
+                    "ID": 9,
+                    "Title": "GCSE"
+                },
+                "Id": 73,
+                "Title": "10",
+                "zghw": "YR-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 73,
+                "$$hashKey": "object:139"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "fc903d82-bdc9-43ad-898d-695599e9246b",
+                "odata.etag": "\"20\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(74)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(74)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "42030cfe-5a66-4c3e-a5a0-abb4b6e8e8a1",
+                    "ID": 9,
+                    "Title": "GCSE"
+                },
+                "Id": 74,
+                "Title": "11",
+                "zghw": "YR-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 74,
+                "$$hashKey": "object:140"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "84f83c4c-c1d5-4257-b617-2ad8d7379f55",
+        "odata.etag": "\"6\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(14)",
+        "Id": 14,
+        "Title": "High Performance Learning",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 14,
+        "$$hashKey": "object:19",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "dfe65a0f-c83b-4ec7-a35b-b40c8669fcca",
+                "odata.etag": "\"5\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(147)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(147)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "98750ca1-d21a-4f99-9ba8-3ca00de181fe",
+                    "ID": 14,
+                    "Title": "High Performance Learning"
+                },
+                "Id": 147,
+                "Title": "HPL",
+                "zghw": "HPL",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 147,
+                "$$hashKey": "object:143"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "9ee15d32-1128-47dc-b9e5-4d6e4453ff74",
+        "odata.etag": "\"13\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(10)",
+        "Id": 10,
+        "Title": "IB DP",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 10,
+        "$$hashKey": "object:20",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "1ddd910a-3601-46fa-8b6d-84db0bca4470",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(47)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(47)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "4096d850-0e0f-41f4-90bb-59d9c2aef828",
+                    "ID": 10,
+                    "Title": "IB DP"
+                },
+                "Id": 47,
+                "Title": "11",
+                "zghw": "Grade 11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 47,
+                "$$hashKey": "object:145"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "6b873ce6-78e4-4a31-ba13-6953608d9ebf",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(48)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(48)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "6d5e841d-950b-47a6-bcf5-4e64bf816e5c",
+                    "ID": 10,
+                    "Title": "IB DP"
+                },
+                "Id": 48,
+                "Title": "12",
+                "zghw": "Grade 12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 48,
+                "$$hashKey": "object:146"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "b71b1813-e40b-4635-bbb2-ac0e8cd935ee",
+        "odata.etag": "\"14\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(11)",
+        "Id": 11,
+        "Title": "IB MYP",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 11,
+        "$$hashKey": "object:21",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "cad9ad28-c841-41a9-84f0-c738bcd13c97",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(42)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(42)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "3d7fff8e-a17d-4b2a-a152-eb1b651589e5",
+                    "ID": 11,
+                    "Title": "IB MYP"
+                },
+                "Id": 42,
+                "Title": "6",
+                "zghw": "Grade 6",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 42,
+                "$$hashKey": "object:149"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "9922293b-d217-425a-bd8d-33db9deec460",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(43)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(43)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "19b7e13e-8edb-43cd-9e8f-e93fd2356dc5",
+                    "ID": 11,
+                    "Title": "IB MYP"
+                },
+                "Id": 43,
+                "Title": "7",
+                "zghw": "Grade 7",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 43,
+                "$$hashKey": "object:150"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "2c0e50b2-01b0-43a1-8741-6cb6236f4ea4",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(44)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(44)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "8eaa3e08-f621-4a1e-ad0e-9337e3a5f5a3",
+                    "ID": 11,
+                    "Title": "IB MYP"
+                },
+                "Id": 44,
+                "Title": "8",
+                "zghw": "Grade 8",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 44,
+                "$$hashKey": "object:151"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "0dbd5e6e-c9c0-468e-91bb-0c28e148fbe4",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(45)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(45)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "74ce912b-736c-4b1b-8b6b-225776693b3a",
+                    "ID": 11,
+                    "Title": "IB MYP"
+                },
+                "Id": 45,
+                "Title": "9",
+                "zghw": "Grade 9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 45,
+                "$$hashKey": "object:152"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "bd6278a4-c1cf-4664-ac0a-d8fc7fc29ace",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(46)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(46)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "eec464ff-9606-46fe-ae64-900e2de308ad",
+                    "ID": 11,
+                    "Title": "IB MYP"
+                },
+                "Id": 46,
+                "Title": "10",
+                "zghw": "Grade 10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 46,
+                "$$hashKey": "object:153"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "77f50075-c3b6-462f-81b0-56a32ed01798",
+        "odata.etag": "\"13\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(12)",
+        "Id": 12,
+        "Title": "IB PYP",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 12,
+        "$$hashKey": "object:22",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "2573c881-3f49-40cf-a515-ecb6f842a8b0",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(52)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(52)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "8bd47677-02d4-404b-b891-af84f4b17d84",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 52,
+                "Title": "PK",
+                "zghw": "PK",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 52,
+                "$$hashKey": "object:159"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "9df1c615-0a59-40e6-9029-0b7d9dc37b8e",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(50)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(50)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "5565ed9c-c105-4208-a45d-b1c4bd82788c",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 50,
+                "Title": "KG1",
+                "zghw": "KG1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 50,
+                "$$hashKey": "object:160"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "d5f741d2-a245-43af-aaa1-ce7d1a13a5b4",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(51)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(51)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "c08ad74f-1023-4be9-bb54-02733246f0ae",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 51,
+                "Title": "KG2",
+                "zghw": "KG2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 51,
+                "$$hashKey": "object:161"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "aa302d4d-af84-4795-ac1b-f8085a23d746",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(37)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(37)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "53d7aace-e97a-46ab-9247-b1dcf7af8641",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 37,
+                "Title": "1",
+                "zghw": "Grade 1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 37,
+                "$$hashKey": "object:162"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "79b02b17-2973-4e6a-a730-4a73c4b54956",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(38)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(38)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "d02392a2-78fb-40fd-9ac2-d7ff011301e8",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 38,
+                "Title": "2",
+                "zghw": "Grade 2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 38,
+                "$$hashKey": "object:163"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "fbd6070a-9a63-4212-b147-66e7c63ad7b1",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(39)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(39)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "0574501b-d69a-4d5a-af98-db5664158781",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 39,
+                "Title": "3",
+                "zghw": "Grade 3",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 39,
+                "$$hashKey": "object:164"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "640aaea4-885a-4b6b-9229-88859aac5588",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(40)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(40)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "3b17489c-4d3b-4d47-bd7f-cb8a70035f30",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 40,
+                "Title": "4",
+                "zghw": "Grade 4",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 40,
+                "$$hashKey": "object:165"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "adfe2c8f-2470-4b64-bd23-1da6b0c2c204",
+                "odata.etag": "\"7\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(41)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(41)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "31a6bd2d-8425-49b1-869e-d8de2a6999d0",
+                    "ID": 12,
+                    "Title": "IB PYP"
+                },
+                "Id": 41,
+                "Title": "5",
+                "zghw": "Grade 5",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 41,
+                "$$hashKey": "object:166"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "b57314af-66be-4248-b0ac-766257556345",
+        "odata.etag": "\"12\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(2)",
+        "Id": 2,
+        "Title": "ICSE",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 2,
+        "$$hashKey": "object:23",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "97c1bf81-60bb-486e-a423-9c47c06988e6",
+                "odata.etag": "\"5\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(68)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(68)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "d97fd5cc-ed6d-45e0-9d28-489b3f093121",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 68,
+                "Title": "KG1",
+                "zghw": "KG1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 68,
+                "$$hashKey": "object:175"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "c558d1c1-1ff5-42de-b6a7-20f33b5799f0",
+                "odata.etag": "\"5\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(69)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(69)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "8da0774d-ddb9-42ba-b3be-2ca3f55acf2c",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 69,
+                "Title": "KG2",
+                "zghw": "KG2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 69,
+                "$$hashKey": "object:176"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "7ebb0cce-f5c7-4e0e-9da6-0c4ae1ca839c",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(55)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(55)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "e36b09ce-fbbf-4986-9c91-087519703fbd",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 55,
+                "Title": "1",
+                "zghw": "Grade-1",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 55,
+                "$$hashKey": "object:177"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "cf05e939-d7ea-4555-b4cf-ad6f29b9277f",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(56)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(56)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "1bf6ee42-a4a3-4ca5-b680-a572c78580c3",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 56,
+                "Title": "2",
+                "zghw": "Grade-2",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 56,
+                "$$hashKey": "object:178"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "e0fc0a80-3d23-4182-a8e1-10f063e66865",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(57)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(57)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "117903aa-2570-4dcb-891e-427b9dd5cc5d",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 57,
+                "Title": "3",
+                "zghw": "Grade-3",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 57,
+                "$$hashKey": "object:179"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "a16fa74c-d97a-4690-a65d-7943291c3a0d",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(58)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(58)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "17fbb544-e212-443c-97b2-d5087cd014a3",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 58,
+                "Title": "4",
+                "zghw": "Grade-4",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 58,
+                "$$hashKey": "object:180"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "eb5216a5-dd59-4943-8829-e92bcb46bae7",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(59)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(59)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "bfac613c-c005-48ec-bf3c-45fae1586b15",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 59,
+                "Title": "5",
+                "zghw": "Grade-5",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 59,
+                "$$hashKey": "object:181"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "f9b4c246-706b-41f3-a502-3fdb382f70c0",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(60)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(60)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "c33df79f-3721-4d77-9025-73d75a3a0285",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 60,
+                "Title": "6",
+                "zghw": "Grade-6",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 60,
+                "$$hashKey": "object:182"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "5ffc1f08-2ad1-4d35-8600-a095a55b17f9",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(61)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(61)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "152125fb-cf46-4110-86c1-7c37dc84b03e",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 61,
+                "Title": "7",
+                "zghw": "Grade-7",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 61,
+                "$$hashKey": "object:183"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "8747abe3-9e20-4182-99ff-216dcc8325c4",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(62)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(62)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "62d9fdea-a32d-4a6f-8a5a-d2087a68dc98",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 62,
+                "Title": "8",
+                "zghw": "Grade-8",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 62,
+                "$$hashKey": "object:184"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "66fa21ec-e948-472f-86f1-72677151ccab",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(63)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(63)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "a39a3051-443a-4e0f-a140-8f9821dfdfdc",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 63,
+                "Title": "9",
+                "zghw": "Grade-9",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 63,
+                "$$hashKey": "object:185"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "09c1c18f-3477-489d-ab83-aadfe74c3e9c",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(64)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(64)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "b9210be7-91fa-4497-a8f1-0212207e6bce",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 64,
+                "Title": "10",
+                "zghw": "Grade-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 64,
+                "$$hashKey": "object:186"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "fe9d56a8-ecea-467f-abd5-44192ec7423c",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(65)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(65)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "b030e5d7-11e5-4221-b6e8-0af93510bead",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 65,
+                "Title": "11",
+                "zghw": "Grade-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 65,
+                "$$hashKey": "object:187"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "cb4e8e57-cfb2-492f-92c5-c1dc65256e1b",
+                "odata.etag": "\"6\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(66)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(66)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "5258fcc7-18c0-4c1d-94b9-de84c3657967",
+                    "ID": 2,
+                    "Title": "ICSE"
+                },
+                "Id": 66,
+                "Title": "12",
+                "zghw": "Grade-12",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 66,
+                "$$hashKey": "object:188"
+            }
+        ]
+    },
+    {
+        "odata.type": "SP.Data.CurriculumListItem",
+        "odata.id": "5da0f9ff-f920-493a-8524-2b50eb550034",
+        "odata.etag": "\"9\"",
+        "odata.editLink": "Web/Lists(guid'02e2978a-16c6-4254-a21b-965092433110')/Items(4)",
+        "Id": 4,
+        "Title": "IGCSE",
+        "IsActive1": true,
+        "IsDeleted": false,
+        "IsVisible": true,
+        "ID": 4,
+        "$$hashKey": "object:24",
+        "grareInvoke": true,
+        "Grades": [
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "cd3c69bb-9374-4aff-869e-285bdf0abf12",
+                "odata.etag": "\"15\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(82)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(82)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "d74f3386-4b13-4a90-9765-700df6814228",
+                    "ID": 4,
+                    "Title": "IGCSE"
+                },
+                "Id": 82,
+                "Title": "10",
+                "zghw": "YR-10",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 82,
+                "$$hashKey": "object:203"
+            },
+            {
+                "odata.type": "SP.Data.GradesListItem",
+                "odata.id": "720610d7-08e9-4460-b50a-a3cf8e5cb758",
+                "odata.etag": "\"15\"",
+                "odata.editLink": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(83)",
+                "Curriculum@odata.navigationLinkUrl": "Web/Lists(guid'a9fb622f-5643-439e-b1b9-135f9cffa58d')/Items(83)/Curriculum",
+                "Curriculum": {
+                    "odata.type": "SP.Data.CurriculumListItem",
+                    "odata.id": "ead48fc3-9a24-459a-9509-b4395c7539c8",
+                    "ID": 4,
+                    "Title": "IGCSE"
+                },
+                "Id": 83,
+                "Title": "11",
+                "zghw": "YR-11",
+                "IsActive1": true,
+                "IsDeleted": false,
+                "IsVisible": true,
+                "ID": 83,
+                "$$hashKey": "object:204"
+            }
+        ]
+    }
+]

@@ -1,0 +1,354 @@
+<div *ngIf="result" class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-heading ng-binding">{{result.title}}</h1>
+        </div>
+    </div>
+
+    <!-- submission details start -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <h5 class="card-title text-medium border-bottom m-0 py-3 px-4">Submission Details</h5>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12 border-right pr-sm-0">
+                            <div class="content border-bottom px-4 py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4 col-md-12 col-12">
+                                        <p class="text-medium heading-font font-small mb-1 mb-sm-0">Reference Number
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-12">
+                                        <span class="font-small ng-binding">{{result.referenceId}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content border-bottom px-4 py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4 col-md-12 col-12">
+                                        <p class="text-medium heading-font font-small mb-1 mb-sm-0">Submitted By</p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-12">
+                                        <span class="font-small ng-binding">{{result.createdbyuser.username}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 pl-sm-0">
+                            <div class="content border-bottom px-4 py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4 col-md-12 col-12">
+                                        <p class="text-medium heading-font font-small mb-1 mb-sm-0">Submitted Date
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-12">
+                                        <span class="font-small ng-binding">{{result.createdon | date:'d MMM y, h:mm
+                                            a'}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content border-bottom px-4 py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4 col-md-12 col-12">
+                                        <p class="text-medium heading-font font-small mb-1 mb-sm-0">Status</p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-12">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-8">
+                                                <span
+                                                    class="font-small text-secondary ng-binding">{{result.status}}</span>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 px-sm-0">
+                                                <a href="javascript:void(0)" (click)="onClick('approval_history')"
+                                                    class="btn-link font-small goto-history">Approval History</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- submission details end -->
+
+    <!-- topic details start -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <h5 class="card-title text-medium border-bottom m-0 py-3 px-4">Topic Details</h5>
+                    <div class="content px-4 py-3">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font ng-binding">
+                                Curriculam</div>
+                            <!-- <div class="col-lg-10 col-md-9 col-12 font-small" ng-bind="vm.getText(vm.model.Curriculum)">CBSE , NCERT</div> -->
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <!-- ngRepeat: item in vm.model.Curriculum -->
+                                <a href="" *ngFor="let c of result.topicCurriculumn; let i = index"
+                                    class="badge badge-pill py-2 px-3 mr-2 my-1 text-medium topic-tag border border-dark ng-binding ng-scope">{{c.title}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font ng-binding">
+                                Grade</div>
+                            <!-- <div class="col-lg-10 col-md-9 col-12 font-small" ng-bind="vm.getGardeText(vm.model.Grade)">6</div> -->
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <!-- ngRepeat: item in vm.model.Grade --><a href=""
+                                    *ngFor="let grade of result.topicGrades"
+                                    class="badge badge-pill py-2 px-3 mr-2 my-1 text-medium topic-tag border border-dark ng-binding ng-scope">{{grade.gradename}}</a>
+                                <!-- end ngRepeat: item in vm.model.Grade -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font ng-binding">
+                                Subject</div>
+                            <!-- <div class="col-lg-10 col-md-9 col-12 font-small" ng-bind="vm.getGardeText(vm.model.Grade)">6</div> -->
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <!-- ngRepeat: item in vm.model.Topic_Subjects --><a href=""
+                                    *ngFor="let subject of result.topicSubject"
+                                    class="badge badge-pill py-2 px-3 mr-2 my-1 text-medium topic-tag border border-dark ng-binding ng-scope">{{subject.name}}</a>
+                                <!-- end ngRepeat: item in vm.model.Topic_Subjects -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font ng-binding">
+                                Course</div>
+                            <!-- <div class="col-lg-10 col-md-9 col-12 font-small" ng-bind="vm.getText(vm.model.Course)">Environmental Studies</div> -->
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <!-- ngRepeat: item in vm.model.Course --><a href=""
+                                    *ngFor="let course of result.topicCourses"
+                                    class="badge badge-pill py-2 px-3 mr-2 my-1 text-medium topic-tag border border-dark ng-binding ng-scope">{{course.courseName}}</a>
+                                <!-- end ngRepeat: item in vm.model.Course -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content px-4 py-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Banner</div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <div class="banner-preview d-flex align-items-center justify-content-center rounded">
+                                    <img alt="Banner Image" data-themekey="#" src="{{result.bannerimageurl}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Topic
+                                Description</div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small ng-binding">{{result.description}}</div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Topic Level
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small ng-binding">{{result.topicLevel}}</div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Time Taken to
+                                Complete the Topic</div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small ng-binding">
+                                {{result.completionDuration}}</div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Learning
+                                Outcomes</div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <ul class="objectives" *ngFor="let outcome of result.learningoutcomesList">
+                                    <!-- ngRepeat: outcome in vm.model.learningOutcomes -->
+                                    <li class="ng-binding ng-scope">{{outcome.outcome}}</li>
+                                    <!-- end ngRepeat: outcome in vm.model.learningOutcomes -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3 bg-light">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">External Links
+                            </div>
+                            <div  class="col-lg-10 col-md-9 col-12 font-small ng-scope">
+                                <ul class="objectives" *ngFor="let extContent of result.externalReferences">
+                                    <li class="text-truncate ng-scope"><a  target="_blank"  href="{{extContent.externalreference}}">{{extContent.externalreference}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content px-4 py-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-2 col-md-3 col-12 text-medium font-small heading-font">Tags Added
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-12 font-small">
+                                <!-- ngRepeat: tag in vm.model.TopicTag --><a href=""
+                                    class="badge badge-pill py-2 px-3 mr-2 my-1 text-medium topic-tag border border-dark ng-binding ng-scope"
+                                    *ngFor="let tag of result.topicTags">{{tag.tagName}}</a>
+                                <!-- end ngRepeat: tag in vm.model.TopicTag -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- topic details end -->
+
+    <!-- uploaded files start -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <h5 class="card-title text-medium border-bottom m-0 py-3 px-4">Uploaded files</h5>
+                    <div class="px-4 pt-4 pb-2 overflow-hidden">
+                        <div class="uploaded-filelist d-flex justify-content-start align-items-center flex-wrap">
+                            <!-- ngRepeat: att in vm.model.TopicAttachments -->
+                            <app-existing-attachment [ShowDelete]="false"
+                                [ExistingTopicAttachments]="ExistingTopicAttachments"></app-existing-attachment>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- uploaded files end -->
+
+    <!-- approval history start -->
+    <div class="row mb-4" id="approval_history">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="title-with-fields border-bottom py-3 px-4">
+                        <h5 class="card-title text-medium m-0">Approval History</h5>
+                        <div class="title-fields">
+                            <a (click)="showAllApprovalHistory()" *ngIf="wfApprovalHistory.length>2 && !historyShowAll"
+                                class="btn-link font-small text-medium ng-scope">Show
+                                All</a>
+                        </div>
+                    </div>
+                    <div class="responsive-table">
+                        <table class="table table-hover table-striped m-0 tbl-approval-history" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th data-title="Action By" class="text-semibold border-0 pl-lg-4">Action By</th>
+                                    <th data-title="Action On" class="text-semibold border-0">Action On</th>
+                                    <th data-title="Action Type" class="text-semibold border-0">Action Type</th>
+                                    <th data-title="Comments" class="text-semibold border-0">Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let wfHistory of wfApprovalHistory; let i = index;">
+                                    <!-- ngRepeat: his in vm.model.history -->
+                                    <!-- ngIf: $index<2||vm.historyShowAll -->
+                                    <tr *ngIf=" i < 2 || historyShowAll" class="ng-scope">
+                                        <td data-title="Action By" class="pl-lg-4 ng-binding">
+                                            {{wfHistory.approvedbyFullName}}
+                                        </td>
+                                        <td data-title="Action On" class="ng-binding">{{wfHistory.createddate | date:'d
+                                            MMM y,
+                                            h:mm a'}}</td>
+                                        <td data-title="Action Type">
+                                            <span class="ng-binding text-secondary">{{wfHistory.actionTakenName}}</span>
+                                        </td>
+                                        <td data-title="Comments" class="ng-binding">{{wfHistory.comments}}</td>
+                                    </tr>
+                                </ng-container>
+
+                                <!-- end ngIf: $index<2||vm.historyShowAll -->
+                                <!-- end ngRepeat: his in vm.model.history -->
+                            </tbody>
+                        </table>
+                        <div class="text-center">
+                            <a href="javascript:void(0)" id="loadMore" role="button"
+                                class="btn-link my-4 font-small text-medium d-none">Load More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- approval history end -->
+    <!-- ng-show="vm.isApprover" -->
+    <form [formGroup]="commentForm">
+        <div class="row mb-4">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="custom-control custom-checkbox">
+                    <input formControlName="isFeatured" type="checkbox"
+                        class="custom-control-input ng-pristine ng-untouched ng-valid ng-empty" id="makeitFeatured">
+                    <label class="custom-control-label" for="makeitFeatured">Want to make this topic
+                        featured?</label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12" *ngIf="isFeaturedField">
+                <div class="md-form md-outline date-time-picker date-icon mb-0">
+                    <label class="custom-control-label active" for="datepicker">Feature this Topic Till</label>
+                    <!-- <input placeholder="Till date" type="text" class="form-control datepicker mb-0" id="datepicker"> -->
+                    <input style="width:80%" formControlName="featuredTill" matInput class="mat-picker" [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+
+                <span class="error text-danger small tilldateerror" id="banner-image-required-error"
+                    style="display: none;">Please Enter the Till Date</span>
+            </div>
+        </div>
+
+        <!-- comment box start -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="md-form md-outline mb-0">
+                            <textarea formControlName="comments" id="txtarea"
+                                class="md-textarea form-control mb-0 ng-pristine ng-untouched ng-valid ng-empty"
+                                rows="2" style="min-height: 80px;"></textarea>
+                            <label for="txtarea" class="">Leave your comment</label>
+                        </div>
+                        <span class="error text-danger small commenterror" id="banner-image-required-error"
+                            style="display: none;">Please Enter the Reason</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- comment box end -->
+        <!-- ng-show="vm.isCheckout && vm.isCheckoutBySameUser" -->
+        <div *ngIf="finalWfData && isApprover" class="row">
+            <div class="col-12 text-right d-flex d-sm-block justify-content-center"
+                *ngIf="finalWfData.ischeckedout == true && isCheckoutBySameUser ">
+
+                <button *ngFor="let actions of actionsList" (click)="onActionTaken(actions.id)"
+                    class="btn btn-outline-primary px-2 px-sm-3 flex-grow-1 waves-effect waves-light"
+                    type="button">{{actions.wfactionname}}</button>
+            </div>
+        </div>
+        <div class="row ng-hide" *ngIf="finalWfData && finalWfData.ischeckedout == true">
+            Checkout by {{finalWfData.ischeckedoutbyUserName}}
+        </div>
+        <div *ngIf="finalWfData && isApprover" class="row">
+            <div class="col-12 text-right d-flex d-sm-block justify-content-center">
+                <button class="btn btn-outline-primary mx-2 flex-grow-1 waves-effect waves-light" type="button"
+                    *ngIf="finalWfData.ischeckedout != true" (click)="CheckOutTask(finalWfData.id)">Checkout</button>
+                <button class="btn btn-outline-primary mx-2 flex-grow-1 waves-effect waves-light" type="button"
+                    *ngIf="finalWfData.ischeckedout == true && isApprover"
+                    (click)="DiscardCheckOutTask(finalWfData.id)">Discard Checkout</button>
+            </div>
+        </div>
+
+    </form>
+</div>

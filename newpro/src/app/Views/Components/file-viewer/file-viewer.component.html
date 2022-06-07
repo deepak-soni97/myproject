@@ -1,0 +1,20 @@
+<div class="container  my-4">
+    <ngx-doc-viewer *ngIf="isPdfFile || isText" [url]="fileViewerUrl" viewer="google" style="width:100%;height:70vh;">
+    </ngx-doc-viewer>
+
+    <ngx-doc-viewer *ngIf="isMsOfficeFile" [url]="fileViewerUrl" viewer="office" style="width:100%;height:70vh;">
+    </ngx-doc-viewer>
+
+
+    <div *ngIf="isImage">
+        <div class="col d-flex align-items-center justify-content-center">
+            <img src="{{fileViewerUrl}}" class="img-fluid" />
+        </div>
+    </div>
+    <div *ngIf="isAudio" class="col d-flex align-items-center justify-content-center">
+        <video controls width="100%">
+            <source [src]="fileViewerUrl" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video.</p>
+        </video>
+    </div>
+</div>

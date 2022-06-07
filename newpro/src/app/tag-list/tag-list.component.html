@@ -1,0 +1,35 @@
+<section class="tag-list-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel owl-theme tag-carousel py-3 owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                            style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 100%;">
+                            <div class="owl-item active" style="width: auto; margin-right: 10px;"><a
+                                    ng-repeat="tag in vm.TopicTags"
+                                    href="https://gemsedu.sharepoint.com/sites/Edupedia/Pages/Search-Results.aspx?stxt=Typography"
+                                    class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope"
+                                    ng-bind="tag">Typography</a></div>
+                            <div class="owl-item active" style="width: auto; margin-right: 10px;"><a
+                                    ng-repeat="tag in vm.TopicTags"
+                                    href="https://gemsedu.sharepoint.com/sites/Edupedia/Pages/Search-Results.aspx?stxt=digital design"
+                                    class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope"
+                                    ng-bind="tag">digital design</a></div>
+                            <div class="owl-item active" style="width: auto; margin-right: 10px;"><a
+                                    ng-repeat="tag in vm.TopicTags"
+                                    href="https://gemsedu.sharepoint.com/sites/Edupedia/Pages/Search-Results.aspx?stxt=design"
+                                    class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope"
+                                    ng-bind="tag">design</a></div>
+                            <div class="owl-item active" style="width: auto; margin-right: 10px;"><a
+                                    ng-repeat="tag in vm.TopicTags"
+                                    href="https://gemsedu.sharepoint.com/sites/Edupedia/Pages/Search-Results.aspx?stxt=design cycle"
+                                    class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope"
+                                    ng-bind="tag">design cycle</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

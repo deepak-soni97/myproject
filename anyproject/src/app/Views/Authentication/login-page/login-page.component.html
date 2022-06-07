@@ -1,0 +1,30 @@
+<div class="col-6 mx-auto m-4">
+    <h2>Log In</h2>
+    <form [formGroup]="loginForm" autocomplete="off" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <input autocomplete="off" id="username" autocomplete="chrome-off" type="text" class="form-control"
+                formControlName="userName" required />
+            <div class="text-danger" *ngIf="loginForm.controls['userName'].errors">
+                <small>Please Enter User Name</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" autocomplete="off" autocomplete="chrome-off" type="password" class="form-control"
+                formControlName="password" required>
+            <div class="text-danger" *ngIf="loginForm.controls['password'].errors">
+                <small>Please Enter Password</small>
+            </div>
+        </div>
+        <div class="d-flex flex-font">
+            <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+            <div class="ml-auto">
+                <a class="p-2" href="#" [routerLink]="['/',pageNames.ForgotPassword]">Forget Password?</a>
+            </div>
+            <!-- <div class="ml-auto"> <a class="p-2" href="#" [routerLink]="['/teacher']">Create Teacher Account?</a>
+            <a class=" " href="#" [routerLink]="['/registration']">Create your Account?</a></div> -->
+        </div>
+    </form>
+</div>

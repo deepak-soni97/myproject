@@ -1,0 +1,51 @@
+ <!--Modal-->
+ <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Edit Banner Image</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+  </div>
+  <div class="modal-body">
+  <div class="container mt-5 text-center">
+
+   
+  
+    <div class="col-md-12">
+      <input type="file" (change)="onFileChange($event)" />
+    </div>
+  
+    <div class="col-md-8">
+       <image-cropper
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [containWithinAspectRatio]="containWithinAspectRatio"
+        [aspectRatio]="4 / 3"
+        [resizeToWidth]="256"
+        [cropperMinWidth]="128"
+        [onlyScaleDown]="true"
+        [roundCropper]="false"
+        [canvasRotation]="canvasRotation"
+        [transform]="transform"
+        [alignImage]="'left'"
+        [style.display]="showCropper ? null : 'none'"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady($event)"
+        (loadImageFailed)="loadImageFailed()"
+    ></image-cropper>
+    </div>
+  
+    <div class="col-md-4">
+      
+      <img [src]="cropImgPreview" />
+    </div>
+  <button class="btn btn-primary">Update Cover Image</button>
+
+  </div>
+</div>
+  
+  

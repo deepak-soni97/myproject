@@ -1,0 +1,146 @@
+<div class="container pt-4 pb-4" style="min-height: 500px;">
+    <h1>Courses</h1>
+    <div class="row d-flex col-12">
+        <form [formGroup]="basicForm">
+            <div class="row mt-3">
+               <div class="col-12">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-3 col-12">
+                        <app-multiselect-dropdown [isMultiple]="false" (onChangeEmitter)="GradeGetFromServer($event)"
+                           [placeholder]="'Select Programs'" [items]="Curriculums">
+                        </app-multiselect-dropdown>
+                        <div
+                           *ngIf="basicForm.controls['programSelectList'].invalid && basicForm.controls['programSelectList'].touched"
+                           class="error text-danger small">
+                           <div *ngIf="basicForm.controls['programSelectList'].errors">
+                              Please select a program
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-12">
+                        <app-multiselect-dropdown [isMultiple]="false"
+                           [selectedItems]="basicForm.controls['GradeSelectList'].value" [groupByKey]="'groupName'"
+                           (onChangeEmitter)="SubjectsGetFromServer($event)" [placeholder]="'Select Grade/Year'"
+                           [disabled]="!isGradeEnable" [items]="GradesMasterList">
+                        </app-multiselect-dropdown>
+                        <div *ngIf="isGradeEnable == true">
+                           <div
+                              *ngIf="basicForm.controls['GradeSelectList'].invalid && basicForm.controls['GradeSelectList'].touched "
+                              class="error text-danger small">
+                              <div *ngIf="basicForm.controls['GradeSelectList'].errors">
+                                 Please select a Grade/Year
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-12">
+                        <app-multiselect-dropdown [isMultiple]="false"
+                           [selectedItems]="basicForm.controls['SubjectSelectList'].value"
+                           (onChangeEmitter)="CoursesGetFromServer($event)" [placeholder]="'Select Category'"
+                           [disabled]="!isSubjectEnable" [items]="SubjectsMasterList">
+                        </app-multiselect-dropdown>
+                        <div *ngIf="isSubjectEnable == true">
+                           <div
+                              *ngIf="basicForm.controls['SubjectSelectList'].invalid && basicForm.controls['SubjectSelectList'].touched"
+                              class="error text-danger small">
+                              <div *ngIf="basicForm.controls['SubjectSelectList'].errors">
+                                 Please select a Subject
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+    </div>
+   <div class="row col-12 pt-4">
+       <div class="row col-12 pt-4">
+        <div class="d-flex col-6">
+            <input type="search" placeholder="Search" #searchtext (keyup)="doFilter(searchtext.value)" class="form-control mt-1" />
+        </div>        
+        <div class="d-flex justify-content-end col-6">
+            <button class="btn btn-primary" (click)="OpenCreatePopup(true)">Add New Course</button>
+        </div>
+       </div>
+       <table mat-table [dataSource]="dataSource" matSort class="mt-2 mat-elevation-z8">
+          <ng-container matColumnDef="id">
+             <th mat-header-cell *matHeaderCellDef style="width: 10%;" mat-sort-header> ID </th>
+             <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+          <ng-container matColumnDef="orderId">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%;" mat-sort-header> Order </th>
+            <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+         </ng-container>
+          <ng-container matColumnDef="coursename" style="width: 60%;">
+             <th mat-header-cell *matHeaderCellDef mat-sort-header> Course Name </th>
+             <td mat-cell *matCellDef="let element"> {{element.coursename}} </td>
+          </ng-container>
+          <ng-container matColumnDef="enabled">
+             <th mat-header-cell *matHeaderCellDef> IsEnabled </th>
+             <td mat-cell *matCellDef="let element">
+                <mat-checkbox color="primary" class="example-margin" [checked]="element.enabled"
+                   (change)="toggleState(element,$event)">
+                   {{element.enabled?'Enabled':'Disabled'}}
+                </mat-checkbox> 
+             </td>
+          </ng-container> 
+          <ng-container [matColumnDef]="'action'">
+             <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Action </th>
+             <td mat-cell *matCellDef="let element">
+                <button class="btn  btn-primary btn-sm text-white" (click)="OpenCreatePopup(true,element)">
+                   <mat-icon mat-icon-button>edit</mat-icon>
+                </button>
+                <!-- <button class="btn  btn-danger btn-sm text-white ml-2" (click)="delete(element)">
+                   <mat-icon mat-icon-button>delete</mat-icon>
+                </button> -->
+             </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+       </table>
+ 
+       <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons></mat-paginator>
+    </div>
+ 
+ </div>
+ <ng-template #formDialog>
+    <div mat-dialog-content>
+       <form [formGroup]="formCreation">
+          <div class="form-group">
+             <label>Course Name</label>
+             <input class="form-control" type="text" name="coursename" formControlName="coursename">
+             <span class="text-danger" *ngIf="
+          formCreation.controls['coursename']?.errors?.required">field required
+             </span>             
+          </div>
+          <div class="form-group">
+            <label>Order</label>
+            <input class="form-control" type="number" name="orderId" formControlName="orderId">
+            <span class="text-danger" *ngIf="
+         formCreation.controls['orderId']?.errors?.required">field required
+            </span>
+         </div>
+       </form>
+    </div>
+ 
+    <div class="d-flex justify-content-between">
+ 
+       <button class="btn btn-primary" [disabled]="formCreation.dirty && formCreation.errors"
+          (click)="save(true)">Save</button>
+ 
+ 
+       <button (click)="save(false)" class="btn btn-danger">Cancel</button>
+ 
+    </div>
+ </ng-template>
+ 
+ <ng-template #confirmation>
+    <h3 mat-dialog-title>Confirm action</h3>
+    <hr />
+    <div mat-dialog-content>Are you sure to want remove this item ?</div>
+    <div mat-dialog-actions class="mt-4 d-flex justify-content-between">
+       <button mat-raised-button (click)="dialogRefDelete.close(true)" class="btn btn-danger">Yes</button>
+       <button mat-raised-button (click)="dialogRefDelete.close(false)" class="btn btn-primary">No</button>
+    </div>
+ </ng-template> 

@@ -1,0 +1,74 @@
+<!-- <form [formGroup]="uploadForm"> -->
+<file-upload [control]="fileUploadControl" [animation]="animation">
+    <ng-template let-isFileDragDropAvailable="isFileDragDropAvailable" #placeholder>
+        <file-upload-drop-zone>
+            <ng-container *ngIf="isFileDragDropAvailable; else isNotDragDropAvailable">
+                Drag & Drop
+            </ng-container>
+            <ng-template #isNotDragDropAvailable>
+                <b>Klicken Sie hier</b> um<br> eine Datei auszuwählen
+            </ng-template>
+        </file-upload-drop-zone>
+    </ng-template>
+
+    <ng-template let-i="index" let-file="file" let-control="control" #item>
+        <!-- <div>
+            <div class="rounded border d-flex justify-content-center align-items-center mb-2">
+                <i [ngClass]="getFileIconCss(file,'resource-type mr-4')"></i>
+
+            </div>
+            <span class="small text-truncate" [textContent]="file.name"></span>
+        </div> -->
+        
+        <div class="file-preview-frame krajee-default kv-preview-thumb ng-scope">
+            <div class="kv-file-content">
+                <i [ngClass]="getFileIconCss(file,'resource-type')"></i>
+            </div>
+            <div class="file-thumbnail-footer">
+                <div class="file-footer-caption" title="{{file.name}}">
+                    <div class="file-caption-info ng-binding" [textContent]="file.name"></div>
+                    <div class="file-size-info"><samp class="ng-binding">{{(file.size/(1024)).toFixed(2)}} KB</samp></div>
+                </div>
+                <div class="file-actions" (click)="control.removeFile(file)">
+                    <div class="file-footer-buttons">
+                        <span class="kv-file-remove btn btn-sm btn-kv btn-default waves-effect waves-light">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- <div class="file-actions">
+                    <div class="file-footer-buttons">
+                        <button type="button" ng-click="vm.removeFile($index)"
+                            class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary waves-effect waves-light"
+                            title="Remove file"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </div> -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!-- <file-upload-list-item [index]="i" [file]="file" [control]="control"></file-upload-list-item> -->
+    </ng-template>
+
+    <!-- <ng-template let-i="index" let-file="file" let-control="control" #item>
+        <div class="file-info" (click)="control.removeFile(file)">
+            <span class="file-name">{{ file.name }}</span>
+        </div>
+    </ng-template> -->
+    <!-- <ng-template  let-i="index" let-file="file" let-control="control" #item >
+    <div class="kv-fileinput-error file-error-message ng-scope" (click)="attachmentErrorClick()" *ngIf="attachmentError">
+        <button type="button" class="close kv-error-close" aria-label="Close" style="
+        color: #000;
+        ">
+        </button>
+        <ul>
+            <li ng-bind-html="vm.attachmentErrorhtml" class="ng-binding">Only files with Type
+                doc,docx,odt,pdf,xls,xlsx,ods,ppt,pptx,txt,htm,html,zip,jpeg,jpg,png,gif,tiff,eps,psd,indd,ai,raw,webm,mpg,mp2,mpeg,mpe,mpv,ogg,mp4,m4p,m4v,avi,wmv,mov,qt,flv,swf,avchd,m4a,flac,mp3,wav,wma,acc
+                are Allowed.</li>
+        </ul>
+    </div>
+</ng-template> -->
+</file-upload>
+
+
+<!-- </form> -->

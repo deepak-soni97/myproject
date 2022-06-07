@@ -1,0 +1,53 @@
+.ngx-pagination {
+  padding-left: 0px !important;
+  padding-right: 50px !important;
+}
+
+.ngx-pagination .current,
+.btn-info {
+  background: #17a2b8 !important;
+  border: transparent !important;
+  border-radius: 20px !important;
+}
+
+.ngx-pagination .current:hover {
+  background: #17a2b8 !important;
+  border-radius: 20px !important;
+  border: transparent !important;
+}
+.status-style {
+  display: flex !important;
+  background: rgb(248 239 223) !important;
+  border-radius: 50px !important;
+  width: fit-content !important;
+  padding: 10px !important;
+  color: #f4a007;
+  font-weight: 500;
+}
+.pagination-style {
+  margin-top: 10px !important;
+}
+.ngx-pagination .current {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+th {
+  font-weight: 700;
+  font-size: 15px;
+  color: black;
+}

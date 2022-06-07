@@ -1,0 +1,52 @@
+<!-- <section class="tag-list-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="owl-carousel owl-theme tag-carousel py-3 owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                            style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                            <div *ngFor="let tag of tagsList;" class="owl-item"
+                                style="width: auto; margin-right: 10px;">
+                                <span style="cursor: pointer;" (click)="onTagClick(tag)"
+                                    class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope">{{tag}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="tag-list-container">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="owl-carousel owl-theme tag-carousel py-3 owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                            style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                            <owl-carousel-o [options]="customOptions" class="my-carousel">
+                                <ng-container *ngFor="let tag of tagsList">
+                                    <ng-template carouselSlide>
+                                        <span style="cursor: pointer;" (click)="onTagClick(tag)" 
+                                        class="badge badge-pill border py-2 px-3 text-medium topic-tag ng-binding ng-scope">  {{tag}}</span>
+                                    </ng-template>
+
+                                </ng-container>
+                            </owl-carousel-o>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+

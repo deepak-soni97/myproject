@@ -1,0 +1,14 @@
+.owl-stage{
+    width: 10000%!important;
+}
+.owl-carousel .topic-card .slide-details .content {
+    height: 9.3125rem;
+}
+section.topic-section {
+    min-height: 23.4375rem;
+}
+.LatestPreloder,.FeaturedPreloader,.PopularPreloader{
+z-index: 99999;
+}
+
+

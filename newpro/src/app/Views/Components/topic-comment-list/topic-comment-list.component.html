@@ -1,0 +1,141 @@
+<form [formGroup]="commentSubmissionForm" class="comment-section px-5 py-4 border-top">
+
+    <div class="comment-form d-flex align-items-center p-4 ng-cloak">
+        <div class="userAvatar mr-3"><img src="{{(userProfile?.profilepic) || '../../assets/Images/user-icon.jpg'}}"
+                alt=""></div>
+        <textarea formControlName="commentTextVal" [(ngModel)]="fillteredComment"
+            (ngModelChange)="changeHandler($event)" placeholder="Leave your review" class="form-control"></textarea>
+        <p id="txtReview-filer" style="display: none;"></p>
+        <button type="button"
+            (click)="postCommentSubmit(0,getformArrayGet('commentTextVal').value,getformArrayGet('commentItems').controls)"
+            class="btn btn-primary post-comment flex-center ml-2 px-4 waves-effect waves-light">
+            <i class="fas fa-paper-plane mr-2"></i> Post
+        </button>
+
+
+    </div>
+    <div class="comments-container mt-0">
+
+        <ul formArrayName="commentItems" *ngFor="let rootCmnt of getformArrayGet('commentItems').controls; index as i;"
+            class="comments-list position-relative">
+            <li [formGroupName]="i">
+                <!-- <input type="text" formControlName="comment"
+                 class="form-control mr-2"/> -->
+                <div class="comment-main-level d-flex justify-content-between">
+                    <div class="comment-avatar rounded-circle">
+                        <img src="{{rootCmnt.get('commentedbyuserprofilepicurl')?.value|| '../../assets/Images/user-icon.jpg'}}"
+                            alt="">
+                    </div>
+                    <div class="comment-box flex-1 ml-4">
+                        <div class="comment-head px-3">
+                            <h6 class="comment-name mr-2 mb-0 text-semibold by-author">
+                                {{rootCmnt.get('commentedbyuserfullname')?.value}}</h6>
+                            <span class="font-italic small"
+                                [textContent]="getDate(rootCmnt.get('createddate')?.value)">20 Seconds
+                                ago</span>
+                        </div>
+                        <div class="comment-content px-3">
+                            {{rootCmnt.get('comment')?.value}}
+                        </div>
+                        <div class="comment-meta bg-white px-3 pb-2">
+                            <a (click)="toggleReply(rootCmnt)" class="trigger-commentbox"><span
+                                    class="text-semibold small">REPLY</span></a>
+
+                            <a *ngIf="rootCmnt.get('commentItems')?.value?.length==0" href="javascript:void(0)"
+                                class="trigger-commentbox float-right"
+                                (click)="loadChildComments(rootCmnt.get('id')?.value,rootCmnt.get('commentItems'),true)">
+                                <span class="text-semibold small">View Reply</span>
+                            </a>
+                        </div>
+                        <div *ngIf="rootCmnt.get('showReply')?.value" class="thiscomment px-3 py-2 border-top">
+                            <textarea formControlName="commentTextVal" [(ngModel)]="replyComment"
+                                (ngModelChange)="reply($event)"
+                                class="border rounded d-block w-100 m-0 px-2 font-small"></textarea>
+                            <button class="btn btn-sm btn-primary mt-2 send-comment waves-effect waves-light"
+                                type="button"
+                                (click)="postCommentSubmit(rootCmnt.get('id')?.value,rootCmnt.get('commentTextVal')?.value,rootCmnt.get('commentItems'),rootCmnt)">
+                                <i class="fas fa-paper-plane mr-2"></i>Post</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- child 1 -->
+                <ul formArrayName="commentItems"
+                    *ngFor="let childCmnt of getformArrayGetFromElement(rootCmnt).controls; index as j;"
+                    class="comments-list reply-list">
+                    <li [formGroupName]="j">
+                        <div class="d-flex justify-content-between">
+                            <div class="comment-avatar rounded-circle">
+                                <img src="{{childCmnt.get('commentedbyuserprofilepicurl')?.value || '../../assets/Images/user-icon.jpg'}}"
+                                    alt="">
+                            </div>
+                            <div class="comment-box flex-1 ml-4">
+                                <div class="comment-head px-3">
+                                    <h6 class="comment-name mr-2 mb-0 text-semibold by-author">
+                                        {{childCmnt.get('commentedbyuserfullname')?.value}}</h6>
+                                    <span class="font-italic small"
+                                        [textContent]="getDate(childCmnt.get('createddate')?.value)"></span>
+                                </div>
+                                <div class="comment-content px-3">
+                                    {{childCmnt.get('comment')?.value}}
+
+                                </div>
+                                <div class="comment-meta bg-white px-3 pb-2">
+                                    <a (click)="toggleReply(childCmnt)" class="trigger-commentbox"><span
+                                            class="text-semibold small">REPLY</span></a>
+
+                                    <a *ngIf="childCmnt.get('commentItems')?.value?.length==0" href="javascript:void(0)" class="trigger-commentbox float-right"
+                                        (click)="loadChildComments(childCmnt.get('id')?.value,childCmnt.get('commentItems'),true)">
+                                        <span class="text-semibold small">View Reply</span>
+                                    </a>
+                                </div>
+                                <div *ngIf="childCmnt.get('showReply')?.value" class="thiscomment px-3 py-2 border-top">
+                                    <textarea formControlName="commentTextVal" [(ngModel)]="childReply"
+                                        (ngModelChange)="replyHandler($event)"
+                                        class="border rounded d-block w-100 m-0 px-2 font-small"></textarea>
+                                    <button class="btn btn-sm btn-primary mt-2 send-comment waves-effect waves-light"
+                                        type="button"
+                                        (click)="postCommentSubmit(childCmnt.get('id')?.value,childCmnt.get('commentTextVal')?.value,childCmnt.get('commentItems'),childCmnt)">
+                                        <i class="fas fa-paper-plane mr-2"></i>Post</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- child 2 -->
+                        <ul formArrayName="commentItems"
+                            *ngFor="let subChildCmnt of getformArrayGetFromElement(childCmnt).controls; index as k;"
+                            class="comments-list reply-list">
+                            <li [formGroupName]="k">
+                                <div class="d-flex justify-content-between">
+                                    <div class="comment-avatar rounded-circle">
+                                        <img src="{{subChildCmnt.get('commentedbyuserprofilepicurl')?.value || '../../assets/Images/user-icon.jpg'}}"
+                                            alt="">
+                                    </div>
+                                    <div class="comment-box flex-1 ml-4">
+                                        <div class="comment-head px-3">
+                                            <h6 class="comment-name mr-2 mb-0 text-semibold by-author">
+                                                {{subChildCmnt.get('commentedbyuserfullname')?.value}}</h6>
+                                            <span class="font-italic small"
+                                                [textContent]="getDate(subChildCmnt.get('createddate')?.value)"></span>
+                                        </div>
+                                        <div class="comment-content px-3">
+                                            {{subChildCmnt.get('comment')?.value}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- child 2 end -->
+
+
+                    </li>
+                </ul>
+                <!-- child 1 end -->
+
+
+
+            </li>
+        </ul>
+    </div>
+</form>

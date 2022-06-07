@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <a class="navbar-brand" href="#"><img class="logo-img" src="../../assets/Images/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" *ngIf="!isSignOut">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#" [routerLink]="['/']"><i class="icon-Home"></i>Home <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" *ngIf="isTeacher">
+
+        <a class="nav-link" href="{{pagesLink.TeacherDashboard}}"><i class="icon-Mylearning"></i> My Space</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{pagesLink.SearchPage}}"><i class="icon-Category"></i> Browse Topics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{pagesLink.Cataloge}}"><i class="icon-Catalog"><img
+              style="width:20px; height:20px; margin:0 10px 0 0;" src="../../assets/Images/Catalog.png"></i>Catalog</a>
+      </li>
+      <li class="nav-item" *ngIf="isTeacher">
+        <a class="nav-link" href="{{pagesLink.ContributeTopic}}"><i class="icon-Contribute"></i>Contribute</a>
+      </li>
+    </ul>
+    <!-- <a class="navbar-brand" (click)="toggleShow()"><img class="user-icon" src="../../assets/Images/user-icon.jpg"></a> -->
+    <a class="navbar-brand" (click)="showPopup(1,$event)"><img class="user-icon"
+        src="{{(userProfile?.profilepic) || '../../assets/Images/user-icon.jpg'}}"></a>
+    <div class="dropdown-menu dropdown-menu-right m-0 mt-n1 py-3 user-profile-dropdown show"
+      (mouseleave)="$event.stopPropagation()" id="divshow" *ngIf="isShown">
+      <h6 class="px-3 mb-3 " *ngIf="userProfile.firstname == null && userProfile.lastname == null">
+        {{userProfile?.username}}<span class="d-block font-small text-regular text-black-50 mt-1"></span></h6>
+      <h6 class="px-3 mb-3 " *ngIf="userProfile.firstname != null && userProfile.lastname != null">
+        {{userProfile?.firstname}} {{userProfile?.lastname}}<span
+          class="d-block font-small text-regular text-black-50 mt-1"></span></h6>
+      <div class="dropdown-divider"></div>
+      <div class="profile-actions px-3">
+        <!-- <a target="_self" *ngIf="isTeacher" class="dropdown-item px-0 ng-scope" href=""
+          [routerLink]="[pagesLink.SchoolDashboard]">Admin
+          Dashboard</a> -->
+          <a target="_self" *ngIf="isTeacher" class="dropdown-item px-0 ng-scope" href=""
+          [routerLink]="[pagesLink.AdministratorHome]">Administration</a>
+        <a class="dropdown-item px-0 ng-scope" (click)="onProfileClick()">Profile</a>
+        <a target="_self" class="dropdown-item px-0 ng-scope" href="{{pagesLink.SavedTopic}}">My Saved
+          Topics</a>
+        <a target="_self" class="dropdown-item px-0 ng-scope" href="{{pagesLink.changePassword}}" >Change
+          Password</a>
+        <a class="dropdown-item px-0" (click)="onSignOut()" target="_top">Sign Out</a>
+      </div>
+    </div>
+  </div>
+
+</nav>

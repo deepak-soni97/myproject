@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 33</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-26" transform="translate(0.750000, 0.701799)">
+            <rect id="Rectangle-Copy-22" fill="#E1F0FF" x="0" y="0" width="52" height="52" rx="8"></rect>
+            <g id="Group-22" transform="translate(13.500000, 13.500000)">
+                <rect id="Rectangle" fill="#B3D7FF" fill-rule="nonzero" x="6.389" y="4.28546088e-14" width="12.223" height="2.006"></rect>
+                <rect id="Rectangle" fill="#B3D7FF" fill-rule="nonzero" x="3.42" y="4.011" width="18.158" height="2.006"></rect>
+                <path d="M0,8.022 L0,25 L25,25 L25,8.022 L0,8.022 Z M23,23 L2,23 L2,10.022 L23,10.022 L23,23 Z" id="Shape" fill="#3699FF" fill-rule="nonzero"></path>
+                <rect id="Rectangle" fill="#3699FF" x="8.499" y="12.511" width="8" height="8"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

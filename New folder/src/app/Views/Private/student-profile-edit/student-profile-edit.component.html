@@ -1,0 +1,280 @@
+<div class="container">
+    <div class="row user-profile-edit">
+        <div class="col-lg-3 col-md-3 col-12 border-right">
+            <ul class="py-4 pr-0 pr-md-4 quickLinks">
+                <li class="border-bottom text-medium "><a (click)="onClick('section_basicinfo')"
+                        class="d-block py-3 text-uppercase font-small">Basic Information</a></li>
+                <!-- <li class="border-bottom text-medium"><a (click)="onClick('section_aboutme')"
+                        class="d-block py-3 text-uppercase font-small">About me</a></li>
+                <li class="border-bottom text-medium"><a (click)="onClick('section_myexperties')"
+                        class="d-block py-3 text-uppercase font-small">My
+                        Expertise</a></li>
+                <li class="border-bottom text-medium"><a (click)="onClick('section_ontheweb')"
+                        class="d-block py-3 text-uppercase font-small">On
+                        the Web</a></li> -->
+            </ul>
+        </div>
+        <div class="col-lg-9 col-md-9 col-12">
+            <form [formGroup]="EditForm">
+                <div class="profile-form px-0 px-md-4 mt-4 mb-4">
+                    <!-- user avatar -->
+                    <div class="user-avatar position-relative mb-5 mx-auto">
+                        <div class="userAvatar-4x mx-auto">
+                            <img src="{{profilePicChanged || getControl('profilepic')?.value}}">
+                        </div>
+                        <div style="position: absolute;right: 30%;bottom: 0px; cursor:pointer" tabindex="500"
+                            class="btn bt-primary z-depth-0 m-0 p-0 mt-1 btn-browse btn-file">
+                            <i class="fa fa-edit m-0 p-0"></i>
+                            <input class="fileUploader ng-pristine ng-valid ng-empty ng-touched" type="file"
+                                id="topicCoverImg" (change)="onCoverFileSelected($event)" accept="image/*"
+                                data-msg-accepts="only images are supported">
+                        </div>
+                        <a style="position: absolute;right: 15%;bottom: 0px; " *ngIf="profilePicChanged" class=""
+                            (click)="cropperImagePopupOpen(contentBannerCrop)"><i class="fa fa-crop"
+                                aria-hidden="true"></i></a>
+                    </div>
+                    <!-- user avatar -->
+                    <ng-template #contentBannerCrop let-modal>
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-label="Close"
+                                (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="height: 300px;">
+                            <image-cropper style="width: 100%;" [imageChangedEvent]="imageChangedEvent"
+                                [aspectRatio]="1/1" [maintainAspectRatio]="true" [alignImage]="'center'" format="png"
+                                (imageCropped)="imageCropped($event)" [resizeToWidth]="300" [resizeToHeight]="300">
+                            </image-cropper>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"
+                                (click)="modal.close('Save click');cropperImagePopupClose()">Done</button>
+                        </div>
+                    </ng-template>
+                    <!-- Basic information -->
+                    <section id="section_basicinfo" class="edit-basic-info mb-4">
+                        <h5 class="mb-4">Basic Information</h5>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <h6 class="body-font mt-2 text-bold mb-2">
+                                    First Name<span class="text-danger">*</span>
+                                </h6>
+                                <input type="text" formControlName="firstname"
+                                    class="form-control py-1 heading-font w-100 px-0 px-sm-2" required>
+                                <span *ngIf="EditForm.controls['firstname'].touched" class="error text-danger small">
+                                    <div *ngIf="EditForm.controls['firstname'].errors">
+                                        This field is required
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <h6 class=" body-font mt-2 text-bold mb-2">
+                                    <span class="text-danger">*</span>Last Name
+                                </h6>
+                                <input type="text" formControlName="lastname"
+                                    class="form-control py-1 heading-font w-100 px-0 px-sm-2" required>
+                                <span *ngIf="EditForm.controls['lastname'].touched" class="error text-danger small">
+                                    <div *ngIf="EditForm.controls['lastname'].errors">
+                                        This field is required
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <h6 class="m-0 body-font mt-2 text-bold mb-2 mb-sm-0">School</h6>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-12">
+                                <input type="text" [value]="SchoolName" readonly
+                                    class="border-0 py-1 heading-font w-100 px-0 px-sm-2">
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <h6 class="m-0 body-font mt-2 text-bold mb-2 mb-sm-0">Email</h6>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-12">
+                                <input type="email" [value]="email" readonly
+                                    class="border-0 py-1 heading-font w-100 px-0 px-sm-2">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <h6 class="m-0 body-font mt-2 text-bold mb-2 mb-sm-0"><span
+                                        class="text-danger">*</span>Teaching Since</h6>
+                            </div>
+                            <div class="col-lg-9 col-md-8 col-12 form-group">
+
+                                <input placeholder="Student Since" type="date"
+                                    value="{{ studentsinceFormat | date:'yyyy-MM-dd' }}" formControlName="studentsince"
+                                    id="datepicker" class="datepicker form-control" required>
+                                <span *ngIf="EditForm.controls['studentsince'].touched" class="error text-danger small">
+                                    <div *ngIf="EditForm.controls['studentsince'].errors">
+                                        This field is required
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                    </section>
+                    <section>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-12">
+                                        <app-multiselect-dropdown
+                                            [selectedItems]="EditForm.controls['programSelectList'].value"
+                                            [isMultiple]="false" (onChangeEmitter)="GradeGetFromServer($event)"
+                                            [placeholder]="'Select Programs'" [items]="Curriculums">
+                                        </app-multiselect-dropdown>
+                                        <div *ngIf="EditForm.controls['programSelectList'].invalid && EditForm.controls['programSelectList'].touched"
+                                            class="error text-danger small">
+                                            <div *ngIf="EditForm.controls['programSelectList'].errors">
+                                                Please select a program
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-12">
+                                        <app-multiselect-dropdown [isMultiple]="false"
+                                            [selectedItems]="EditForm.controls['GradeSelectList'].value"
+                                            [groupByKey]="'groupName'" (onChangeEmitter)="SubjectsGetFromServer($event)"
+                                            [placeholder]="'Select Grade/Year'" [disabled]="!isGradeEnable"
+                                            [items]="GradesMasterList">
+                                        </app-multiselect-dropdown>
+                                        <div *ngIf="isGradeEnable == true">
+                                            <div *ngIf="EditForm.controls['GradeSelectList'].invalid && EditForm.controls['GradeSelectList'].touched "
+                                                class="error text-danger small">
+                                                <div *ngIf="EditForm.controls['GradeSelectList'].errors">
+                                                    Please select a Grade/Year
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- <section id="section_aboutme" class="edit-about-me mb-4">
+                        <h5 class="mb-3">About Me</h5>
+                        <ckeditor [editor]="Editor"
+                            [config]="{ toolbar: [ 'heading', 'bold', 'italic', 'bulletedlist', 'numberedlist', 'undo', 'redo'] }"
+                            formControlName="aboutme" data="Hello, world!"></ckeditor>
+                    </section> -->
+
+                    <!-- <section id="section_myexperties" class="edit-experties mb-4">
+                        <h5 class="mb-3">My Expertise</h5>
+                        <ckeditor [editor]="Editor"
+                            [config]="{ toolbar: [ 'heading', 'bold', 'italic', 'bulletedlist', 'numberedlist', 'undo', 'redo'] }"
+                            formControlName="myexpertise" data="Hello, world!"></ckeditor>
+                    </section> -->
+                    <!-- <section id="section_ontheweb" class="edit-weblinks">
+                        <h5 class="mb-3">On The Web</h5>
+
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="input-group mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-small">
+                                            <i class="fab fa-twitter mr-0 mr-sm-2"></i> <span
+                                                class="d-none d-sm-inline-block">Twitter</span>
+                                        </span>
+                                    </div>
+                                    <input id="Twitter_Link" type="text" formControlName="twiterprofile"
+                                        data-rule-pattern="true" pattern="^(https?):\/\/[^\s$.?#].[^\s]*$"
+                                        data-msg-pattern="Invalid URL"
+                                        class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern ng-not-empty"
+                                        placeholder="Twitter profile">
+                                </div>
+                                <small class="ml-3">Add your Twitter username (e.g.
+                                    https://twitter.com/johnpinto)</small>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="input-group mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-small">
+                                            <i class="fab fa-facebook-f mr-0 mr-sm-2"></i> <span
+                                                class="d-none d-sm-inline-block">Facebook</span>
+                                        </span>
+                                    </div>
+                                    <input type="text" id="Facebook_Link" formControlName="facebookprofile"
+                                        data-rule-pattern="true" pattern="^(https?):\/\/[^\s$.?#].[^\s]*$"
+                                        data-msg-pattern="Invalid URL"
+                                        class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern ng-not-empty"
+                                        placeholder="Facebook profile">
+                                </div>
+                                <small class="ml-3">Add your Facebook username (e.g.
+                                    https://www.facebook.com/johnpinto)</small>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="input-group mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-small">
+                                            <i class="fab fa-linkedin-in mr-0 mr-sm-2"></i> <span
+                                                class="d-none d-sm-inline-block">Linkedin</span>
+                                        </span>
+                                    </div>
+                                    <input type="text" id="Linkedin_Link" formControlName="linkedinprofile"
+                                        data-rule-pattern="true" pattern="^(https?):\/\/[^\s$.?#].[^\s]*$"
+                                        data-msg-pattern="Invalid URL"
+                                        class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern"
+                                        placeholder="Linkedin profile">
+                                </div>
+                                <small class="ml-3">Add your Linkedin username (e.g.
+                                    https://www.linkedin.com/johnpinto)</small>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="input-group mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-small">
+                                            <i class="fab fa-youtube mr-0 mr-sm-2"></i> <span
+                                                class="d-none d-sm-inline-block">Youtube</span>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" formControlName="youtubeprofile"
+                                        id="Youtube_Link" data-rule-pattern="true"
+                                        pattern="^(https?):\/\/[^\s$.?#].[^\s]*$" data-msg-pattern="Invalid URL"
+                                        placeholder="Youtube channel">
+                                </div>
+                                <small class="ml-3">Add your Youtube channel (e.g.
+                                    https://www.youtube.com/johnpinto)</small>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="input-group mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text font-small">
+                                            <i class="fas fa-link mr-0 mr-sm-2"></i> <span
+                                                class="d-none d-sm-inline-block">Website(http(s)://..)</span>
+                                        </span>
+                                    </div>
+                                    <input type="text" formControlName="website"
+                                        class="form-control ng-pristine ng-untouched ng-valid ng-valid-pattern ng-not-empty"
+                                        id="Website_Link" data-rule-pattern="true"
+                                        pattern="^(https?):\/\/[^\s$.?#].[^\s]*$" data-msg-pattern="Invalid URL"
+                                        placeholder="Website URL">
+                                </div>
+                                <small class="ml-3">Add your Link</small>
+                            </div>
+                        </div>
+
+                    </section> -->
+
+                    <span class="waves-input-wrapper waves-effect waves-light"><button type="Submit" value=""
+                            (click)="onSubmit()" class="btn btn-primary px-5 mt-4">Save</button></span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

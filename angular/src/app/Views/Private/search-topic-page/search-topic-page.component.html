@@ -1,0 +1,348 @@
+<form [formGroup]="searchForm">
+   <div class="subheader">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-md-8 col-12 d-flex align-items-center my-3">
+               <button (click)="toggleFilter()"
+                  class="btn btn-outline-primary btn-sm mr-3 filter-trigger waves-effect waves-light" type="button">
+                  <i class="fas fa-stream"></i> Filter
+               </button>
+               <div class="form-group mt-3">
+                  <select formControlName="OrderByField" (change)="refetchSearch('sorting',null)" id="inputState" class="form-control">
+                     <option value="PublishedDate">Sort By</option>
+                     <option *ngFor="let x of sortingTypes" value="{{x.Value}}">{{x.Title}}</option>
+                  </select>
+               </div>
+            </div>
+            <div class="col-md-4 col-12">
+               <div *ngIf="searchResponse" class="quick-action-links d-flex justify-content-end align-items-center">
+                  <span class="mx-3 w-100 text-center text-sm-right ng-binding">{{searchResponse.totalRows
+                     >0?searchResponse.totalRows:searchResponse.results.length}}
+                     Results found in ({{searchResponse.elapsedTime}})</span>
+                  <!-- <a href="javascript:void(0)" id="grid" class="active"><i class="fas fa-th"></i></a>
+                   <a href="javascript:void(0)" id="list" class=""><i class="fas fa-th-list"></i></a> -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="filter-container d-flex align-items-start align-items-stretch overflow-hidden w-100 px-2">
+         <!-- filter options start -->
+         <div
+            [ngClass]="IsExpand==true?'filter-options border-right mr-4 overflow-hidden py-4 flex-1 bg-white expand':'filter-options border-right mr-4 overflow-hidden py-4 flex-1 bg-white'">
+            <div class="accordion mr-4" id="filters">
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button id="btncurriculum"
+                           class="btn text-left text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#curriculumFilter" aria-expanded="true"
+                           aria-controls="curriculumFilter">
+                           <!-- Curriculum -->
+                           Program
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="curriculumFilter" class="collapse show" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="filterContainer overflow-auto mr-1" formArrayName="Curriculums">
+                           <div *ngFor="let ctrl of getFormControl('Curriculums').controls;index as i;"
+                              class="custom-control custom-checkbox mt-2">
+                              <div [formGroupName]="i">
+                                 <input type="checkbox" (click)="refetchSearch('Curriculums',ctrl.value)"
+                                    formControlName="ischecked" id="chk-curr-{{i}}" class="custom-control-input">
+                                 <label for="chk-curr-{{i}}"
+                                    class="custom-control-label">{{ctrl.get("title")?.value}}</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="card z-depth-0 p-0 rounded-0" ng-if="vm.model.selectedCurriculums.length>0"></div>     -->
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#gradeFilter" aria-expanded="false"
+                           aria-controls="gradeFilter">
+                           Grade
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="gradeFilter" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="col-12 pl-0 mb-2">
+                           <input type="text" class="form-control" placeholder="Search Grade" name="gradeFilerTxtbox"
+                              id="gradeFilerTxtbox">
+                        </div>
+                        <div class="filterContainer overflow-auto mr-1">
+                           <div formArrayName="GradesGroup">
+                              <div *ngFor="let ctrl of getFormControl('GradesGroup').controls;index as i;"
+                                 class="custom-control custom-checkbox mt-2">
+                                 <div [formGroupName]="i">
+                                    <h6 class="small text-primary text-medium ng-binding">
+                                       {{ctrl.get("curriculumTitle")?.value}}
+                                    </h6>
+                                    <div class="gradeFilterOuter" formArrayName="gradesList">
+                                       <div class="custom-control gradefilterITems custom-checkbox mb-1 ng-scope"
+                                          *ngFor="let grade of ctrl.get('gradesList').controls;index as j;">
+                                          <div [formGroupName]="j">
+                                             <input type="checkbox" formControlName="ischecked" id="chk-grd-{{i}}-{{j}}"
+                                                (click)="refetchSearch('Grade',ctrl.value)"
+                                                class="custom-control-input">
+                                             <label for="chk-grd-{{i}}-{{j}}"
+                                                class="custom-control-label font-small text-medium">{{grade.get('gradename')?.value}}</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#subjectFilter" aria-expanded="false"
+                           aria-controls="subjectFilter">
+                           Category
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="subjectFilter" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="col-12 pl-0 mb-2">
+                           <input type="text" class="form-control" placeholder="Search Subject"
+                              name="subjectFilterTxtbox" id="subjectFilterTxtbox">
+                        </div>
+                        <div class="filterContainer overflow-auto mr-1" formArrayName="SubjectsGroup">
+                           <div *ngFor="let ctrl of getFormControl('SubjectsGroup').controls;index as i;"
+                              class="custom-control custom-checkbox mt-2">
+                              <div [formGroupName]="i">
+                                 <input type="checkbox" (click)="refetchSearch('SubjectsGroup',ctrl.value)"
+                                    formControlName="ischecked" id="chk-sub-{{i}}" class="custom-control-input">
+                                 <label for="chk-sub-{{i}}"
+                                    class="custom-control-label">{{ctrl.get("title")?.value}}</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- ngIf: vm.model.selectedGrades.length>0 -->
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#topicLevelFilter" aria-expanded="false"
+                           aria-controls="topicLevelFilter">
+                           Topic Level<img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="topicLevelFilter" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0" formArrayName="LevelGroup">
+                        <div *ngFor="let ctrl of getFormControl('LevelGroup').controls;index as i;"
+                           class="custom-control custom-checkbox mt-2">
+                           <div [formGroupName]="i">
+                              <input type="checkbox" formControlName="ischecked" id="chk-level-{{i}}"
+                                 (click)="refetchSearch('TopicLevel',ctrl.value)"
+                                 class="custom-control-input ng-pristine ng-untouched ng-valid ng-empty">
+                              <label for="chk-level-{{i}}"
+                                 class="custom-control-label">{{ctrl.get("level")?.value}}</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false"
+                           aria-controls="collapse-6">
+                           Rating
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="collapse-6" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="custom-slider">
+                           <ngx-slider [(value)]="minRating" [(highValue)]="maxRating"
+                              (userChange)="refetchSearch('rating',null)" [options]="optionsRating"></ngx-slider>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false"
+                           aria-controls="collapse-7">
+                           Duration
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="collapse-7" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="custom-slider">
+                           <ngx-slider [(value)]="minDuration" [(highValue)]="maxDuration"
+                              (userChange)="refetchSearch('duration',null)" [options]="optionsDuration"></ngx-slider>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#contributorFilter" aria-expanded="false"
+                           aria-controls="contributorFilter">
+                           Contributor
+                           <img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="contributorFilter" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="col-12 pl-0 mb-2">
+                           <input type="text" class="form-control" placeholder="Search Contributor"
+                              name="contribFilerTxtbox" id="contribFilerTxtbox">
+                        </div>
+                        <div class="filterContainer overflow-auto mr-1" formArrayName="ContributorGroup">
+                           <div *ngFor="let ctrl of getFormControl('ContributorGroup').controls;index as i;"
+                              class="custom-control custom-checkbox mt-2">
+                              <div [formGroupName]="i">
+                                 <input type="checkbox" (click)="refetchSearch('ContributorGroup',ctrl.value)"
+                                    formControlName="ischecked" id="chk-contry-{{i}}" class="custom-control-input">
+                                 <label for="chk-contry-{{i}}"
+                                    class="custom-control-label">{{ctrl.get("userName")?.value}}</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card z-depth-0 p-0 rounded-0">
+                  <div class="card-header p-0 mb-0 bg-white">
+                     <h5 class="mb-0">
+                        <button
+                           class="btn text-left collapsed text-semibold text-capitalize w-100 px-0 waves-effect waves-light"
+                           type="button" data-toggle="collapse" data-target="#contributorSchoolFilter"
+                           aria-expanded="false" aria-controls="contributorFilter">
+                           Contributor School<img
+                              src="https://gemsedu.sharepoint.com/sites/Edupedia/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg?ctag=210828"
+                              alt="" data-themekey="#">
+                        </button>
+                     </h5>
+                  </div>
+                  <div id="contributorSchoolFilter" class="collapse" data-parent="#filters">
+                     <div class="card-body border-bottom px-0 pt-0">
+                        <div class="col-12 pl-0 mb-2">
+                           <input type="text" class="form-control" placeholder="Search Contributor School"
+                              name="contribschoolFilerTxtbox" id="contribschoolFilerTxtbox">
+                        </div>
+                        <div class="filterContainer overflow-auto mr-1" formArrayName="ContributorSchoolGroup">
+                           <div *ngFor="let ctrl of getFormControl('ContributorSchoolGroup').controls;index as i;"
+                              class="custom-control custom-checkbox mt-2">
+                              <div [formGroupName]="i">
+                                 <input type="checkbox" (click)="refetchSearch('ContributorSchoolGroup',ctrl.value)"
+                                    formControlName="ischecked" id="chk-contrysch-{{i}}" class="custom-control-input">
+                                 <label for="chk-contrysch-{{i}}"
+                                    class="custom-control-label">{{ctrl.get("displayname")?.value}}</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- filter options end -->
+
+         <!-- filter result start -->
+         <div [ngClass]="IsExpand==true?'filter-result py-4 reduced':'filter-result py-4'">
+
+            <!-- search box -->
+            <div class="search-wrapper input-group position-relative mb-3">
+               <i class="fas fa-search position-absolute active"></i>
+               <input formControlName="SearchText" type="text"
+                  class="form-control rounded-left py-4 pl-5 ng-pristine ng-untouched ng-valid ng-empty"
+                  placeholder="Search Topic">
+               <div class="input-group-append">
+                  <button (click)="refetchSearch('button',null)" class="btn btn-primary m-0 z-depth-0 waves-effect waves-light"
+                     type="button">
+                     Search
+                  </button>
+               </div>
+            </div>
+            <!-- search box end -->
+            <!-- selected filters -->
+            <div class="selected-filters mb-2">
+               <div class="chip" *ngFor="let g of allChips">
+                  {{g}}
+                  <span class="closebtn" (click)=delete(g)>&times;</span>
+               </div>
+            </div>
+            <!-- selected filters end -->
+            <!-- ngIf: vm.results.TotalRows<1 -->
+            <div *ngIf="searchResponse" id="searchedTopics" class="row view-group">
+               <div class="item col-12 col-md-6  ng-scope" [ngClass]="IsExpand?'col-lg-4':'col-lg-3'"
+                  *ngFor="let item of searchResponse.results">
+                  <app-topic-search-card [topic]="item"></app-topic-search-card>
+               </div>
+            </div>
+            <nav *ngIf="pagesCount > 1" id="pagination" aria-label="Page navigation"
+               class="mt-4 ng-scope light-theme simple-pagination">
+               <ul class="pagination pagination-circle">
+                  <li [ngClass]="{'disabled': 1 === activePage}" class="page-item" (click)="onNextPrevClick(false)">
+                     <span class="prev page-link">
+                        <i class="fas fa-chevron-left"></i>
+                     </span>
+                  </li>
+                  <li *ngFor="let item of [].constructor(pagesCount); let i = index" (click)="pageNumClick(i)"
+                     [ngClass]="{'active': i+1 === activePage}" class="page-item"><span class="page-link">{{i+1}}</span>
+                  </li>
+                  <li [ngClass]="{'disabled': pagesCount === activePage}" class="page-item" (click)="onNextPrevClick(true)"><span class="page-link next"><i
+                           class="fas fa-chevron-right"></i></span>
+                  </li>
+               </ul>
+            </nav><!-- end ngIf: vm.numOfPages>1 -->
+            <!-- filter pagination end -->
+         </div>
+         <!-- filter result end -->
+      </div>
+   </div>
+</form>

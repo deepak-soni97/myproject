@@ -1,0 +1,612 @@
+<div class="container py-4">
+
+   <div class="row">
+      <div class="col-12">
+         <h1 class="page-heading ng-scope">Make your contribution</h1>
+
+      </div>
+   </div>
+
+   <form [formGroup]="basicForm">
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-12 mt-2 mb-3">
+            <h3 class="section-heading">Let's get started!</h3>
+            <div class="row mt-3">
+               <div class="col-12">
+                  <div class="mb-4">
+                     <div class="md-form md-outline form-group mb-1">
+                        <input type="text" id="topicName" class="form-control" formControlName="topicName">
+                        <label for="topicName"
+                           [ngClass]="(basicForm.controls.topicName.value && basicForm.controls.topicName.value.length) >0?'active':''">Topic
+                           Name</label>
+                     </div>
+                     <div *ngIf="basicForm.controls['topicName'].invalid && basicForm.controls['topicName'].touched"
+                        class="custerror error text-danger small">
+                        <div *ngIf="basicForm.controls['topicName'].errors">
+                           Please enter a Topic Name
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mb-4">
+                     <div class="md-form md-outline form-group group-margin mb-0">
+                        <textarea id="Description" class="md-textarea form-control overflow-auto"
+                           formControlName="description" rows="3"></textarea>
+                        <label for="Description"
+                           [ngClass]="(basicForm.controls.description.value && basicForm.controls.description.value.length) >0?'active':''">Topic
+                           Description</label>
+                     </div>
+                     <div *ngIf="basicForm.controls['description'].invalid && basicForm.controls['description'].touched"
+                        class="custerror error text-danger small">
+                        <div *ngIf="basicForm.controls['description'].errors">
+                           Please enter a description
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-6 col-md-6 col-12">
+            <h5 class="mt-3 section-heading">Upload cover image for topic <span class="text-warning"><small>(Image
+                     dimensions should be 800x533)</small></span></h5>
+            <div class="row">
+               <div class="col-12">
+                  <div class="uploaderWidget single-image-uploader text-cente file-explorer-wrapperr">
+                     <div class="file-input theme-fas">
+                        <div class="file-preview">
+                           <button type="button" class="close fileinput-remove" aria-label="Close">
+                              <span aria-hidden="true">×</span>
+                           </button>
+                           <div class=" file-drop-zone">
+                              <div class="file-preview-thumbnails">
+                                 <div class="file-preview-frame krajee-default  kv-preview-thumb"
+                                    id="thumb-topicCoverImg-75869_52a0e9bb_609a_40e1_bbd3_45535614cee0.jfif"
+                                    data-fileindex="75869_52a0e9bb_609a_40e1_bbd3_45535614cee0.jfif"
+                                    data-fileid="75869_52a0e9bb_609a_40e1_bbd3_45535614cee0.jfif" data-template="image">
+                                    <div class="kv-file-content">
+                                       <img [src]="croppedImage" width="100%">
+                                    </div>
+                                    <div class="file-thumbnail-footer">
+                                       <div class="file-footer-caption"
+                                          title="52a0e9bb_609a_40e1_bbd3_45535614cee0.jfif">
+                                          <div class="file-caption-info"></div>
+                                          <div class="file-size-info"> <samp>(74.09 KB)</samp></div>
+                                       </div>
+                                       <div class="file-thumb-progress kv-hidden">
+                                          <div class="progress">
+                                             <div
+                                                class="progress-bar bg-info progress-bar-info progress-bar-striped active"
+                                                role="progressbar" aria-valuenow="101" aria-valuemin="0"
+                                                aria-valuemax="100" style="width:101%;">
+                                                Initializing...
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="file-upload-indicator" title="Not uploaded yet"><i
+                                             class="fas fa-plus-circle text-warning"></i></div>
+                                       <div *ngIf="basicForm.controls['BannerFile'].value || bannerUploadPreImage"
+                                          class="file-actions">
+                                          <div class="file-footer-buttons">
+                                             <button type="button" (click)="bannerRemove()"
+                                                class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary"
+                                                title="Remove file"><i class="fas fa-trash-alt"></i></button>
+                                          </div>
+                                       </div>
+
+                                       <div class="clearfix"></div>
+                                    </div>
+                                 </div>
+
+                                 <div class="kv-zoom-cache" style="display:none"></div>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="file-preview-status text-center text-success"></div>
+                              <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+                           </div>
+                        </div>
+                        <div class="kv-upload-progress kv-hidden" style="display: none;">
+                           <div class="progress">
+                              <div class="progress-bar bg-success progress-bar-success progress-bar-striped active"
+                                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                                 style="width:0%;">
+                                 0%
+                              </div>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <button type="button" tabindex="500" title="Abort ongoing upload"
+                           class="btn btn-default float-right rounded z-depth-0 m-0 p-0 mt-1 btn-cancel kv-hidden fileinput-cancel fileinput-cancel-button"><i
+                              class="fas fa-ban"></i> <span class="hidden-xs">Cancel</span></button>
+
+                        <!-- <div tabindex="500"
+                           class="btn btn-outline-primary rounded z-depth-0 m-0 p-0 mt-1 btn-browse btn-file"><i
+                              class="fas fa-folder-open"></i> <span class="hidden-xs">Browse …</span>
+                              <input class="fileUploader" type="file" id="topicCoverImg" 
+                              data-msg-accepts="only images are supported"/>
+                           
+                           </div> -->
+
+                        <input style="display: none;" type="file" (click)="file.value = ''"
+                           (change)="onCoverFileSelected($event)" accept="image/*" #file>
+                        <button (click)="file.click()"
+                           class="btn btn-outline-primary rounded z-depth-0 m-0 p-0 mt-1 btn-browse btn-file"><i
+                              class="fas fa-folder-open"></i> <span class="hidden-xs">Browse …</span>
+                        </button>
+                     </div>
+                  </div>
+                  <a style="color: white;" *ngIf="editBannerText"
+                     class="mt-2 btn btn-sm btn-primary ml-3 waves-effect waves-light"
+                     (click)="cropperImagePopupOpen(contentBannerCrop)">Edit Banner</a>
+                  <!-- <span class="error text-danger small" id="banner-image-required-error">Please
+                     Attach a Banner Image with 800x533 dimentions</span> -->
+                  <span *ngIf="basicForm.controls['BannerFile'].invalid && basicForm.controls['BannerFile'].touched && !bannerError"
+                     class="custerror error text-danger small">
+                     <div *ngIf="basicForm.controls['BannerFile'].errors">
+                        Please Attach a Banner Image or Edit Image with 800x533 dimensions
+                     </div>
+                  </span>
+                  <span class="custerror error text-danger small">
+                     {{bannerError}}
+                  </span>
+               </div>
+
+               <ng-template #contentBannerCrop let-modal>
+                  <div class="modal-header">
+                     <h4 class="modal-title" id="modal-basic-title">Edit Banner</h4>
+                     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body" style="height: 300px;">
+
+                     <image-cropper style="width: 100%;" [imageChangedEvent]="imageChangedEvent" [aspectRatio]="1/0.67"
+                        [maintainAspectRatio]="true" [alignImage]="'center'" format="png"
+                        (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
+                        (cropperReady)="cropperReady()" [resizeToWidth]="800" [resizeToHeight]="533"
+                        (loadImageFailed)="loadImageFailed()"></image-cropper>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-primary"
+                        (click)="modal.close('Save click');cropperImagePopupClose()">Update Cover
+                        Image</button>
+                  </div>
+               </ng-template>
+
+
+            </div>
+         </div>
+      </div>
+      <div class="row mt-3">
+         <div class="col-12">
+            <h3 class="section-heading">Add Program details</h3>
+            <div class="row">
+
+
+               <div class="col-md-4 col-12">
+                  <app-multiselect-dropdown [closeOnSelect]="false" (onChangeEmitter)="GradeGetFromServer($event)"
+                     [placeholder]="'Select Programs'" [selectedItems]="currSelected" [items]="Curriculums">
+                  </app-multiselect-dropdown>
+                  <!-- 
+                  <ng-multiselect-dropdown ng-reflect-placeholder="Select Program" [settings]="dropdownSettings"
+                     [placeholder]="'Select Program'" [data]="Curriculums" formControlName="programSelectList"
+                     (onSelect)="GradeGetFromServer()" [placeholder]="'Select Program'" [(ngModel)]="currSelected"
+                     (onDeSelect)="GradeGetFromServer()">
+                  </ng-multiselect-dropdown> -->
+
+                  <div
+                     *ngIf="basicForm.controls['programSelectList'].invalid && basicForm.controls['programSelectList'].touched"
+                     class="custerror error text-danger small">
+                     <div *ngIf="basicForm.controls['programSelectList'].errors">
+                        Please select a program
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-12">
+                  <app-multiselect-dropdown [closeOnSelect]="false" [groupByKey]="'groupName'"
+                     (onChangeEmitter)="SubjectsGetFromServer($event)" [placeholder]="'Select Grade/Year'"
+                     [disabled]="!isGradeEnable" [items]="GradesMasterList" [selectedItems]="grdSelected">
+                  </app-multiselect-dropdown>
+
+                  <!-- <ng-multiselect-dropdown ng-reflect-placeholder="Select Grade/year" [settings]="dropdownSettings"
+                     [placeholder]="'Select Grade/year'" [data]="GradesMasterList" formControlName="GradeSelectList"
+                     (onSelect)="SubjectsGetFromServer()" [(ngModel)]="grdSelected"
+                     (onDeSelect)="SubjectsGetFromServer()" [disabled]="!isGradeEnable">
+                  </ng-multiselect-dropdown> -->
+                  <div *ngIf="isGradeEnable == true">
+                     <div
+                        *ngIf="basicForm.controls['GradeSelectList'].invalid && basicForm.controls['GradeSelectList'].touched "
+                        class="custerror error text-danger small">
+                        <div *ngIf="basicForm.controls['GradeSelectList'].errors">
+                           Please select a Grade/Year
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-12">
+                  <app-multiselect-dropdown [isMultiple]="false" (onChangeEmitter)="CoursesGetFromServer($event)"
+                     [placeholder]="'Select Category'" [selectedItems]="subjectSelected" [disabled]="!isSubjectEnable"
+                     [items]="SubjectsMasterList">
+                  </app-multiselect-dropdown>
+
+                  <!-- <ng-multiselect-dropdown ng-reflect-placeholder="Select Category" [settings]="dropdownSettingSingle"
+                     [placeholder]="'Select Category'" [data]="SubjectsMasterList" formControlName="SubjectSelectList"
+                     (onSelect)="CoursesGetFromServer()" [(ngModel)]="subjectSelected" [disabled]="!isSubjectEnable"
+                     (onDeSelect)="CoursesGetFromServer()">
+                  </ng-multiselect-dropdown> -->
+                  <div *ngIf="isSubjectEnable == true">
+                     <div
+                        *ngIf="basicForm.controls['SubjectSelectList'].invalid && basicForm.controls['SubjectSelectList'].touched"
+                        class="custerror error text-danger small">
+                        <div *ngIf="basicForm.controls['SubjectSelectList'].errors">
+                           Please select a Subject
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+            </div>
+            <div class="col-md-4 col-12">
+            </div>
+            <div class="col-md-4 col-12">
+            </div>
+         </div>
+         <div class="col-12 mt-3">
+            <div class="row">
+
+               <div class="col-md-4 col-12">
+                  <app-multiselect-dropdown [selectedItems]="courseSelected" [closeOnSelect]="false"
+                     [groupByKey]="'groupName'" (onChangeEmitter)="CategoryGetFromServer($event)"
+                     [placeholder]="'Select Course/Subject'" [disabled]="!isCourseEnable" [items]="coursesMasterList">
+                  </app-multiselect-dropdown>
+
+                  <!-- <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'Select Course/Subject'"
+                     [data]="coursesMasterList" [(ngModel)]="courseSelected" formControlName="CourseSelectList"
+                     (onSelect)="CategoryGetFromServer()" [disabled]="!isCourseEnable"
+                     (onDeSelect)="CategoryGetFromServer()">
+                  </ng-multiselect-dropdown> -->
+                  <div *ngIf="isCourseEnable == true">
+                     <div
+                        *ngIf="basicForm.controls['CourseSelectList'].invalid && basicForm.controls['CourseSelectList'].touched"
+                        class="custerror error text-danger small ">
+                        <div *ngIf="basicForm.controls['CourseSelectList'].errors">
+                           Please select a category
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-md-4 col-12">
+
+               </div>
+            </div>
+            <div class="col-md-4 col-12">
+            </div>
+            <div class="col-md-4 col-12">
+            </div>
+         </div>
+      </div>
+
+      <div>
+         <div class="row mt-3">
+            <div class="col-12 d-flex align-items-center mb-2">
+               <h3 class="section-heading mb-0">Learning Outcomes</h3>
+               <a (click)="addLearningoutcome()" *ngIf="listEdittext" style="color: white;"
+                  class="btn btn-sm btn-primary ml-3 waves-effect waves-light"><i class="fas fa-plus"></i> Add</a>
+
+               <span class=" ml-auto">
+                  <a class="btn btn-link ml-2 waves-effect waves-light" (click)="bulkeditclick()" *ngIf="listEdittext">
+                     Bulk Edit
+                  </a>
+                  <a class="btn btn-link ml-2 waves-effect waves-light" (click)="listeditclick()" *ngIf="!listEdittext">
+                     List Edit
+                  </a>
+
+               </span>
+            </div>
+            <!-- <div class="col-12 external-content" *ngIf="listEdittext">
+               <div class="input-group mb-3 addInput" *ngFor="let outCome of listeditsLearningOutcome; let i = index">
+                  <div class="md-form md-outline m-0 flex-1 d-flex align-items-center">
+                  
+                     <input type="text" *ngIf="EditInput" [(ngModel)]="bulkeditsLearningOutcome" name="outCome_{{i}}" class="form-control mr-2">
+                     <a *ngIf="i!=0" style="cursor: pointer;" (click)="learningOutcomRemove(i)"><i
+                           class="fas fa-trash-alt"></i></a>
+                  </div>
+               </div>
+            </div> -->
+
+            <div class="col-12 external-content" *ngIf="listEdittext">
+               <div formArrayName="learningOutcomes">
+                  <div *ngFor="let outCome of learningOutcomesField.controls; let i = index">
+                     <div class="input-group mb-3 addInput md-form md-outline m-0 flex-1 d-flex align-items-center"
+                        [formGroupName]="i">
+                        <input type="text" *ngIf="EditInput" formControlName="Outcome" class="form-control mr-2">
+                        <a style="cursor: pointer;" (click)="learningOutcomRemove(i)"><i
+                              class="fas fa-trash-alt"></i></a>
+                     </div>
+                  </div>
+                  <div
+                     *ngIf="basicForm.controls['learningOutcomes'].invalid && basicForm.controls['learningOutcomes'].touched"
+                     class="alert alert-danger">
+                     <div *ngIf="basicForm.controls['learningOutcomes'].errors">
+                        Enter a Outcomes
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="d-flex align-items-center" *ngIf="!listEdittext">
+               <div class="md-form md-outline m-0 flex-1 d-flex align-items-center">
+                  <textarea id="LearningOutcomeItemsBulk" class="form-control overflow-auto mr-2"
+                     name="learningOutcomeItemsBulk" formControlName="bulkeditsLearningOutcome" rows="4"></textarea>
+
+               </div>
+            </div>
+         </div>
+         <div *ngIf="basicForm.controls['learningOutcomes'].invalid && basicForm.controls['learningOutcomes'].touched"
+            class="alert alert-danger">
+            <div *ngIf="basicForm.controls['learningOutcomes'].errors">
+               Enter a Outcomes
+            </div>
+         </div>
+      </div>
+
+      <div class="row mt-3 mb-3">
+         <div class="col-12 d-flex align-items-center mb-2">
+            <h3 class="section-heading mb-0">Estimated Duration and Level of Topic</h3>
+         </div>
+         <div class="col-md-2 col-12">
+            <app-multiselect-dropdown [selectedItems]="hoursSelected" [isMultiple]="false"
+               (onChangeEmitter)="onHourSelect($event)" [placeholder]="'Select Hours'" [items]="Hours">
+            </app-multiselect-dropdown>
+
+            <!-- <ng-multiselect-dropdown [settings]="dropdownSettingSingle" [placeholder]="'Hours'" [data]="Hours"
+               formControlName="hourList" [(ngModel)]="hoursSelected"></ng-multiselect-dropdown> -->
+            <div *ngIf="basicForm.controls['hourList'].invalid && basicForm.controls['hourList'].touched"
+               class="custerror error text-danger small ">
+               <div *ngIf="basicForm.controls['hourList'].errors">
+                  Please select a Hour
+               </div>
+            </div>
+         </div>
+
+         <div class="col-md-2 col-12">
+            <app-multiselect-dropdown [selectedItems]="minutesSelected" [isMultiple]="false"
+               (onChangeEmitter)="onMinuteSelect($event)" [placeholder]="'Select Minutes'" [items]="Minutes">
+            </app-multiselect-dropdown>
+
+            <!-- <ng-multiselect-dropdown ng-reflect-placeholder="Minutes" [settings]="dropdownSettingSingle"
+               [placeholder]="'Minutes'" [(ngModel)]="minutesSelected" [data]="Minutes" formControlName="minuteList">
+            </ng-multiselect-dropdown> -->
+            <div *ngIf="basicForm.controls['minuteList'].invalid && basicForm.controls['minuteList'].touched"
+               class="custerror error text-danger small ">
+               <div *ngIf="basicForm.controls['minuteList'].errors">
+                  Please select a Minutes
+               </div>
+            </div>
+         </div>
+
+         <div class="col-md-3 col-12">
+            <app-multiselect-dropdown [selectedItems]="TopicLevelSelected" [isMultiple]="false"
+               (onChangeEmitter)="onTopicLevelSelect($event)" [placeholder]="'Select Topic Level'" [items]="topicLevel">
+            </app-multiselect-dropdown>
+            <!-- <ng-multiselect-dropdown ng-reflect-placeholder="Select Topic Level" [settings]="dropdownSettingSingle"
+               [placeholder]="'Select Topic Level'" [(ngModel)]="TopicLevelSelected" [data]="topicLevel"
+               formControlName="TopicLevel" [disabled]="false">
+            </ng-multiselect-dropdown> -->
+            <div *ngIf="basicForm.controls['TopicLevel'].invalid && basicForm.controls['TopicLevel'].touched"
+               class="custerror error text-danger small">
+               <div *ngIf="basicForm.controls['TopicLevel'].errors">
+                  Please select a Topic Level
+               </div>
+            </div>
+         </div>
+
+
+      </div>
+
+      <div class="row mt-5x">
+         <div class="col-md-12 col-12">
+            <h3 class="section-heading">Add Tags</h3>
+            <div class="tag-container">
+               <app-contribute-add-tags [selectedTopicTags]="selectedTags"
+                  (tagsItemsEmitter)="onFormGroupChangeEvent($event)"></app-contribute-add-tags>
+            </div>
+         </div>
+      </div>
+
+      <div class="row mt-3">
+         <div class="col-12 d-flex align-items-center mb-2">
+            <h3 class="section-heading mb-0">Add External Content</h3>
+            <a (click)="ExternalContentsAdd()" style="color: white;"
+               class="btn btn-sm btn-primary ml-3 waves-effect waves-light"><i class="fas fa-plus"></i> Add</a>
+         </div>
+         <div class="col-12 external-content">
+            <div formArrayName="ExternalContents">
+               <div *ngFor="let outCome of ExternalContentsField.controls; let i = index">
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text font-small">
+                           <i class="fas fa-link mr-0 mr-sm-2"></i> <span
+                              class="d-none d-sm-inline-block">Link(http(s)://..)</span>
+                        </span>
+                     </div>
+
+                     <div class="md-form md-outline m-0 flex-1" [formGroupName]="i">
+
+                        <input type="text" formControlName="Externalreference" class="form-control m-0">
+
+                     </div>
+
+                     <a style="cursor: pointer;" (click)="ExternalContentsRemove(i)"><i
+                           class="fas fa-trash-alt m-3"></i></a>
+
+                  </div>
+                  <div
+                     *ngIf="outCome.get('Externalreference')?.invalid && outCome.get('Externalreference')?.touched && outCome.get('Externalreference')?.errors?.required"
+                     class="custerror error text-danger small">
+                     Invalid URL.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- upload topic files start -->
+      <div class="row mt-5" *ngIf="ExistingTopicAttachments && ExistingTopicAttachments.length>0">
+         <div class="col-md-12 col-12">
+            <h3 class="section-heading">Uploaded files</h3>
+            <div class="border rounded px-4 pt-4 pb-2 overflow-hidden">
+               <app-existing-attachment (onDeleteFileEmitter)="onDeleteFileEmitter($event)" [ShowDelete]="true"
+                  [ExistingTopicAttachments]="ExistingTopicAttachments">
+               </app-existing-attachment>
+
+            </div>
+         </div>
+      </div>
+      <div class="row mt-5">
+         <div class="col-md-12 col-12">
+            <h3 class="section-heading">Upload your files</h3>
+
+            <ul class="text-warning">
+               <li> <small> Kindly provide a valid file name when you attach any
+                     document(s)</small></li>
+               <li><small>Please avoid uploading any copyrighted materials as attachments</small></li>
+
+               <li><small>Total size of all attachment should not be more then 100 MB</small></li>
+
+            </ul>
+            <app-multiple-file-upload (uploadFilesItemsEmitter)="onAttachmentUploadChange($event)">
+            </app-multiple-file-upload>
+
+
+
+            <div class="row" formArrayName="Attachments">
+               <div class="col-12">
+                  <div class="card">
+                     <ul class=" list-group rounded" *ngFor="let file of attachmentField.controls;let i = index">
+                        <li [formGroupName]="i"
+                           class="list-group-item d-flex justify-content-between align-items-center">
+                           <h6 class="m-0 font-small text-regular ng-binding">
+                              {{file.value.fileItem.name}}
+                           </h6>
+                           <div class="custom-control custom-checkbox">
+                              <input name="attfile_{{i}}" id="attfile_{{i}}" type="checkbox"
+                                 formControlName="isDownloadable" class="custom-control-input">
+                              <label class="custom-control-label font-small" for="attfile_{{i}}">Allow Download</label>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div *ngIf="attachmentError" class="custerror error text-danger small">
+               {{fileAttachmentError}}
+            </div>
+
+         </div>
+      </div>
+      <div class="row mt-4" style="padding-top: 1%;">
+         <div class="col-12">
+            <div class="col-12">
+               <div class="card">
+                  <ul class="list-group rounded">
+
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="row mb-4" *ngIf="wfApprovalHistory.length > 0">
+         <hr>
+         <div class="col-12">
+            <div class="card">
+               <div class="card-body p-0">
+                  <div class="title-with-fields border-bottom py-3 px-4">
+                     <h5 class="card-title text-medium m-0">Approval History</h5>
+                     <div class="title-fields">
+                        <a (click)="showAllApprovalHistory()" *ngIf="wfApprovalHistory.length>2 && !historyShowAll"
+                           class="btn-link font-small text-medium ng-scope">Show
+                           All</a>
+                     </div>
+                  </div>
+                  <div class="responsive-table">
+                     <table class="table table-hover table-striped m-0 tbl-approval-history" cellspacing="0">
+                        <thead>
+                           <tr>
+                              <th data-title="Action By" class="text-semibold border-0 pl-lg-4">Action By</th>
+                              <th data-title="Action On" class="text-semibold border-0">Action On</th>
+                              <th data-title="Action Type" class="text-semibold border-0">Action Type</th>
+                              <th data-title="Comments" class="text-semibold border-0">Comments</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <ng-container *ngFor="let wfHistory of wfApprovalHistory; let i = index;">
+                              <!-- ngRepeat: his in vm.model.history -->
+                              <!-- ngIf: $index<2||vm.historyShowAll -->
+                              <tr *ngIf=" i < 2 || historyShowAll" class="ng-scope">
+                                 <td data-title="Action By" class="pl-lg-4 ng-binding">
+                                    {{wfHistory.approvedbyFullName}}
+                                 </td>
+                                 <td data-title="Action On" class="ng-binding">{{wfHistory.createddate | date:'d
+                                    MMM y,
+                                    h:mm a'}}</td>
+                                 <td data-title="Action Type">
+                                    <span class="ng-binding text-secondary">{{wfHistory.actionTakenName}}</span>
+                                 </td>
+                                 <td data-title="Comments" class="ng-binding">{{wfHistory.comments}}</td>
+                              </tr>
+                           </ng-container>
+
+                           <!-- end ngIf: $index<2||vm.historyShowAll -->
+                           <!-- end ngRepeat: his in vm.model.history -->
+                        </tbody>
+                     </table>
+                     <div class="text-center">
+                        <a href="javascript:void(0)" id="loadMore" role="button"
+                           class="btn-link my-4 font-small text-medium d-none">Load More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <div class="row ng-scope">
+         <div class="col-12 text-right" *ngIf="!actionsList">
+            <!--*ngIf="basicForm.controls.topicName.value.length > 5"-->
+            <button type="button" (click)="onSubmit('Draft',false)"
+               class="btn btn-outline-primary waves-effect waves-light mr-2">Save as
+               draft</button>
+            <button type="button" (click)="onSubmit('Submitted',false)"
+               class="btn btn-primary waves-effect waves-light">Submit</button>
+         </div>
+         <div class="col-12 text-right" *ngIf="actionsList">
+            <!-- <button type="button" (click)="onSubmit('Submit_Approval')"
+               class="btn btn-primary waves-effect waves-light">Submit For Approval</button> -->
+
+            <button *ngFor="let actions of actionsList" (click)="onActionTaken(actions.id, actions.wfactionname)"
+               class="btn ml-2  px-2 px-sm-3 flex-grow-1 waves-effect waves-light" type="button"
+               [ngClass]="actions.wfactionname=='Submit'?'order-0 btn-primary':(actions.wfactionname=='Reject'?'order-10 btn-outline-primary':'order-1 btn-outline-primary')">{{actions.wfactionname}}</button>
+
+         </div>
+      </div>
+   </form>
+
+   <ng-template #fileProcessModalOpenContent let-modal>
+      <div class="modal-body p-4">
+         <p>Uploading Documents</p>
+         <p>{{uploadedAttachment}}/{{totalAttachment}} Uploaded</p>
+         <div class="progress">
+            <div class="progress-bar" [ngStyle]="{width: uploadedPercent+'%'}" role="progressbar" aria-valuenow="25"
+               aria-valuemin="0" aria-valuemax="100"></div>
+         </div>
+         <!-- <ngb-progressbar type="success" textType="white" [value]="25" [showValue]="true"></ngb-progressbar> -->
+
+      </div>
+   </ng-template>
+
+
+</div>

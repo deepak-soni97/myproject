@@ -1,0 +1,173 @@
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-heading">My Dashboard</h1>
+        </div>
+    </div>
+    <div class="row mb-4 contribute-stats">
+        <div class="col-lg-4 col-md-4 col-12">
+            <app-contribute-state-card-component [cardTitle]="'Total Published Contributions'"
+                [stateCount]="topicState.publishedTopicsCount" [iconClass]="'icon-Contribute'">
+            </app-contribute-state-card-component>
+
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+            <app-contribute-state-card-component [cardTitle]="'Pending Draft for Submittion'"
+                [stateCount]="topicState.draftTopicsCount" [iconClass]="'icon-Approve text-success'">
+            </app-contribute-state-card-component>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+            <app-contribute-state-card-component class="card shadow-none pending-submission"
+                [cardTitle]="'Total Pending Tasks'" [stateCount]="topicState.pendingTasksCount"
+                [iconClass]="'icon-Files text-warning'">
+            </app-contribute-state-card-component>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <ul class="nav nav-tabs bg-light" role="tablist">
+                        <li class="nav-item waves-effect waves-light">
+                            <a class="nav-link text-uppercase bg-transparent px-4 py-3" data-toggle="tab" role="tab"
+                                aria-selected="true" (click)="toggleTabs(1)">
+                                <i class="icon-Contribute mr-2"></i> My Contributions
+                            </a>
+                        </li>
+                        <li class="nav-item waves-effect waves-light">
+                            <a class="nav-link text-uppercase bg-transparent px-4 py-3" data-toggle="tab" role="tab"
+                                aria-selected="true" (click)="toggleTabs(2)">
+                                <i class="icon-Approve  mr-2"></i> Pending Tasks
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" [ngClass]="tabIndex==1? 'fade show active':''" id="allTask"
+                            role="tabpanel" >
+
+                            <table datatable [dtOptions]="myContribObj.dtSettings" [dtTrigger]="myContribObj.dtTrigger"
+                                class="table border-bottom border-top mb-0" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Reference No.</th>
+                                        <th class="th-sm">Submitted On</th>
+                                        <th class="th-sm" style="max-width: 30%;">Topic Name</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngIf="myContribObj.tableData?.length != 0">
+                                    <tr style="cursor: pointer;" *ngFor="let topic of myContribObj.tableData"
+                                        (click)="routetoTopAppr(topic.topicid,topic.status)">
+                                        <td class="p-3" [textContent]="topic.topicref"></td>
+                                        <td class="p-3" [textContent]="getDate(topic.createddate)"></td>
+                                        <td class="p-3" [textContent]="topic.topictitle"></td>
+                                        <td class="p-3">
+                                            <span *ngIf="topic.status==='Published'"
+                                                class="alert alert-success py-1 rounded-6x text-success text-medium"
+                                                [textContent]="topic.status"></span>
+
+                                            <span *ngIf="topic.status !='Rejected' && topic.status !='Published'"
+                                                class="alert alert-warning py-1 rounded-6x text-truncate text-warning text-medium"
+                                                [textContent]="topic.status"></span>
+
+                                            <span *ngIf="topic.status==='Rejected'"
+                                                class="alert alert-danger py-1 rounded-6x text-danger text-medium"
+                                                [textContent]="topic.status"></span>
+                                        </td>
+
+
+                                    </tr>
+                                </tbody>
+                                <tbody *ngIf="myContribObj.tableData?.length == 0">
+                                    <tr>
+                                        <td colspan="3" class="no-data-available">No data!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                         
+                        </div>
+                        <div class="tab-pane" [ngClass]="tabIndex==2? 'fade show active':''" id="myPendingTask" role="tabpanel" >
+
+                           
+                            
+                            <table datatable [dtOptions]="myPendingsObj.dtSettings"
+                                [dtTrigger]="myPendingsObj.dtTrigger" class="table border-bottom border-top mb-0"
+                                cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Reference No.</th>
+                                        <th class="th-sm">Submitted On</th>
+                                        <th class="th-sm" style="max-width: 30%;">Topic Name</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngIf="myPendingsObj.tableData?.length != 0">
+                                    <tr style="cursor: pointer;" *ngFor="let topic of myPendingsObj.tableData"
+                                        (click)="routetoTopAppr(topic.topicid,topic.status)">
+                                        <td class="p-3" [textContent]="topic.topicref"></td>
+                                        <td class="p-3" [textContent]="getDate(topic.createddate)"></td>
+                                        <td class="p-3" [textContent]="topic.topictitle"></td>
+                                        <td class="p-3">
+                                            <span *ngIf="topic.status==='Published'"
+                                                class="alert alert-success py-1 rounded-6x text-success text-medium"
+                                                [textContent]="topic.status"></span>
+
+                                            <span *ngIf="topic.status !='Rejected' && topic.status !='Published'"
+                                                class="alert alert-warning py-1 rounded-6x text-truncate text-warning text-medium"
+                                                [textContent]="topic.status"></span>
+
+                                            <span *ngIf="topic.status==='Rejected'"
+                                                class="alert alert-danger py-1 rounded-6x text-danger text-medium"
+                                                [textContent]="topic.status"></span>
+                                        </td>
+
+
+                                    </tr>
+                                </tbody>
+                                <tbody *ngIf="myPendingsObj.tableData?.length == 0">
+                                    <tr>
+                                        <td colspan="3" class="no-data-available">No data!</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- <div id="dtMyContribute_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="dataTables_length" id="dtMyContribute_length"><label>Show
+                                                <select name="dtMyContribute_length" aria-controls="dtMyContribute"
+                                                    class="custom-select custom-select-sm form-control form-control-sm"
+                                                    [(ngModel)]="pendingEntry" (ngModelChange)="selectedEntry()">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>entries</label></div>
+                                    </div>
+                                    <div style="top:10px" class="col-sm-12 col-md-4">
+                                        <select name="dtMyContribute_length" aria-controls="dtMyContribute"
+                                            class="custom-select custom-select-sm form-control form-control-sm"
+                                            [(ngModel)]="pendingDropdown" (ngModelChange)="pendingDrop()">
+                                            <option value="">Status</option>
+                                            <option value="Completed">Completed</option>
+                                            <option value="Draft">Draft</option>
+                                            <option value="Submitted">Submitted</option>
+                                            <option value="School Approval">School Approval</option>
+                                        </select><label class="statusfilterCount col-sm-2 col-md-2"></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div id="dtMyContribute_filter" class="dataTables_filter">
+                                            <label>Search:
+                                                <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

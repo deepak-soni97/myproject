@@ -1,0 +1,17 @@
+<ngx-charts-line-chart
+  [view]="view"
+
+  [legend]="true"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [xAxis]="true"
+  [yAxis]="true"
+  [timeline]="false"
+  [legendTitle]="''"
+  [legendPosition]="LegendPositionStr"
+  [results]="ChartData"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart> 

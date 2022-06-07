@@ -1,0 +1,24 @@
+<div class="container">
+
+  <ng-container *ngIf="!isLoggedin; else elseTemplateLoggedIn">
+
+    <h2 class="text-center mb-4">Login with Facebook in Angular</h2>
+    <button type="button" (click)="loginWithFacebook()" class="btn btn-primary btn-block">Signin with Facebook</button>
+
+  </ng-container>
+  <ng-template #elseTemplateLoggedIn>
+
+    <div class="card">
+      <div class="card-body"> <img class="rounded" [src]="userResponse.photoUrl" alt="Profile" />
+        <h5 class="card-title">Welcome, {{userResponse.name}}</h5>
+        <p class="card-text">Email ID: {{userResponse.email}}</p>
+        <p class="card-text">First Name: {{userResponse.email}}</p>
+        <p class="card-text">Last Name: {{userResponse.email}}</p>
+        <p class="card-text">ID: {{userResponse.id}}</p>
+        <a href="#" class="btn btn-danger btn-sm" (click)="signOut()"> Logout </a>
+      </div>
+    </div>
+
+  </ng-template>
+
+</div>

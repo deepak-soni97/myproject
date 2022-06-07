@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-7">
+        <div class="card-body">
+            <h6 style="cursor: pointer;" class="card-title text-semibold mb-1">{{topic.Title}}</h6>
+            <div style="padding-top: .5em" class="topic-ratings d-flex align-items-center ng-clock">
+                <!-- <app-star-rating [initialStars]="socialResponse.AverageRating"></app-star-rating> -->
+                ({{socialResponse.TotalRatings}})
+            </div>
+            <p style="padding-top: 1em" class="card-text"><small class="text-black-50">By :
+                    <span>{{topic.Author.Title}}</span>
+                </small></p>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <a href="#"
+            class="d-flex h-100 justify-content-center">
+            <img style="cursor: pointer;"
+                src="{{topic.BannerImage.Url}}" class="img-fluid" alt="">
+            <i class="fas fa-2x position-absolute"></i>
+        </a>
+        <span class="topic-level position-absolute badge badge-warning px-2 mr-2">{{topic.TopicLevel}}</span>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.col-side{
+    padding-right:unset!important;
+    padding-left:unset!important;
+}
+.set-icon{
+    position: absolute;
+    right:50px;
+    bottom:0px;
+}

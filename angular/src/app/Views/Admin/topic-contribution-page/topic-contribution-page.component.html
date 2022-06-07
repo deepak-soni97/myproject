@@ -1,0 +1,47 @@
+<!-- <div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-heading ng-scope">Make your contribution</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="contribForm">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 mt-2 mb-3">
+                <h3 class="section-heading">Let's get started!</h3>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <div class="md-form md-outline mb-0 form-group">
+                                <input type="text" id="title" class="form-control" formControlName="title">
+                                <label for="title"
+                                    [ngClass]="(getFormControl('title')?.value && getFormControl('title')?.value.length) >0?'active':''">Topic
+                                    Name</label>
+                            </div>
+                            <div *ngIf="getFormControl('title')?.errors" class="error text-danger small">Please enter a
+                                Topic Name</div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="md-form md-outline form-group group-margin mb-0">
+                                <textarea id="Description" class="md-textarea form-control overflow-auto"
+                                    formControlName="description" rows="3"></textarea>
+                                <label for="Description"
+                                    [ngClass]="(getFormControl('title')?.value && getFormControl('title')?.value.length) >0?'active':''">Topic
+                                    Description</label>
+                            </div>
+                            <div *ngIf="basicForm.controls['description'].invalid && basicForm.controls['description'].touched"
+                                class="error text-danger small">
+                                <div *ngIf="basicForm.controls['description'].errors">
+                                    Please enter a description
+                                </div>
+                                </span>
+                            </div>
+
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div> -->

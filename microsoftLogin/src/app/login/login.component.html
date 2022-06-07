@@ -1,0 +1,29 @@
+<!-- <div class="main-div">
+    <form class="form-div" [formGroup]="userForm">
+        <div class="example-container">
+            <div class="col-md-12">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput mailto:placeholder="pat@example.com" formControlName="emailid" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <button (click)="onSubmit()" class="btn btn-success">Log in</button>
+                <button (click)="signupHandler()" class="btn btn-primary">Sign up</button>
+            </div>
+            <div *ngIf="!loginSuccess">
+                <p>please enter correct id & password</p>
+            </div>
+        </div>
+    </form>
+</div> -->

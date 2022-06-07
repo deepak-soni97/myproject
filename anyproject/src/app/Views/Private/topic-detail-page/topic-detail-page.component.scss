@@ -1,0 +1,48 @@
+span.error {
+    display: block;
+    position: absolute;
+    right: auto;
+    top: 100%;
+    padding-top: 1%;
+}
+
+.liked {
+    color: #004996 !important;
+}
+
+
+.topic-edit-btn {
+    position: absolute;
+    top: 10px;
+    background: #ffc107;
+    padding: 2px 5px;
+    color: #593d00;
+    font-weight: 600;
+    border-radius: 2px;
+    right: 20px;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    margin-top: -5px;
+}
+
+.topic-banner {
+    min-height: 14.062rem;
+}
+.breadcrumbs-wrap .breadcrumbs ul.breadcrumb li span{
+       transform: unset!important;
+}
+.owl-stage{
+    width: 10000%!important;
+}
+.owl-carousel .topic-card .slide-details .content {
+    height: 9.3125rem;
+}
+section.topic-section {
+    min-height: 23.4375rem;
+}
+.LatestPreloder,.FeaturedPreloader,.PopularPreloader{
+z-index: 99999;
+}

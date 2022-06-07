@@ -1,0 +1,97 @@
+<div class="container pt-4 pb-4" style="min-height: 500px;">
+    <h1>School Level Approvers</h1>
+   <div class="row col-12 pt-4">
+       <div class="row col-12 pt-4">
+        <div class="d-flex col-3">
+            <input type="search" placeholder="Search" #searchtext (keyup)="doFilter(searchtext.value)" class="form-control mt-1" />
+        </div>
+        <div class="d-flex col-6">
+            <form [formGroup]="basicForm" class="mt-1 col-12">
+                <app-multiselect-dropdown [isMultiple]="false" (onChangeEmitter)="ApproversGetForSchool($event)"
+                               [placeholder]="'Select School'" [items]="Schools">
+                </app-multiselect-dropdown>
+             </form>
+        </div>
+        <div *ngIf="enableAddNew" class="d-flex justify-content-end col-3">
+            <button class="btn btn-primary" (click)="OpenCreatePopup(true)">Add New Approver</button>
+        </div>
+       </div>
+       <table mat-table [dataSource]="dataSource" matSort class="mt-2 mat-elevation-z8">
+         <ng-container matColumnDef="profilePic">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Profile Picture </th>
+            <td mat-cell *matCellDef="let element">
+               <div class="user-avatar position-relative btn-sm btn-group">
+                  <div class="userAvatar mx-auto">
+                      <img alt="" data-themekey="#"
+                          src="{{element.profilePic || '../../assets/Images/user-icon.jpg'}}">
+                  </div>  
+              </div>
+            </td>
+         </ng-container>         
+          <ng-container matColumnDef="userName">
+             <th mat-header-cell *matHeaderCellDef style="width: 10%;" mat-sort-header> UserName </th>
+             <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+          </ng-container>          
+          <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef style="width: 10%;" mat-sort-header> First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+         </ng-container>
+          <ng-container matColumnDef="lastName" style="width: 60%;">
+             <th mat-header-cell *matHeaderCellDef mat-sort-header> LastName </th>
+             <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+          </ng-container>
+          <ng-container matColumnDef="email" style="width: 60%;">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email</th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+         </ng-container>          
+          <ng-container [matColumnDef]="'action'">
+             <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Action </th>
+             <td mat-cell *matCellDef="let element">
+                <!-- <button class="btn  btn-primary btn-sm text-white" (click)="OpenCreatePopup(true,element)">
+                   <mat-icon mat-icon-button>edit</mat-icon>
+                </button> -->
+                <button class="btn  btn-danger btn-sm text-white ml-2" (click)="delete(element)">
+                   <mat-icon mat-icon-button>delete</mat-icon>
+                </button>
+             </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+       </table>
+ 
+       <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons></mat-paginator>
+    </div>
+ 
+ </div>
+ <ng-template #formDialog>
+    <div mat-dialog-content>
+      <form [formGroup]="formCreation">
+         <ng-select [items]="users" bindLabel="displaySearch"  [closeOnSelect]="true"
+            [multiple]="false" formControlName="selectedUsers" [typeahead]="input$">
+         </ng-select> 
+         <span class="text-danger" *ngIf="
+         formCreation.controls['selectedUsers']?.errors?.required">field required
+            </span>       
+       </form>
+    </div>
+ 
+    <div class="d-flex justify-content-between mt-5">
+ 
+       <button  class="btn btn-primary" [disabled]="formCreation.dirty && formCreation.errors"
+          (click)="save(true)">Save</button>
+ 
+ 
+       <button (click)="save(false)" class="btn btn-danger">Cancel</button>
+ 
+    </div>
+ </ng-template>
+ 
+ <ng-template #confirmation>
+    <h3 mat-dialog-title>Confirm action</h3>
+    <hr />
+    <div mat-dialog-content>Are you sure to want remove this item ?</div>
+    <div mat-dialog-actions class="mt-4 d-flex justify-content-between">
+       <button mat-raised-button (click)="dialogRefDelete.close(true)" class="btn btn-danger">Yes</button>
+       <button mat-raised-button (click)="dialogRefDelete.close(false)" class="btn btn-primary">No</button>
+    </div>
+ </ng-template> 

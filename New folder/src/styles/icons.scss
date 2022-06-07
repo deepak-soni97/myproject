@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('./fonts/font-icon/icomoon.eot');
+    src: url('./fonts/font-icon/icomoon.eot') format('embedded-opentype'), url('./fonts/font-icon/icomoon.ttf') format('truetype'), url('./fonts/font-icon/icomoon.woff') format('woff'), url('./fonts/font-icon/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 24px;
+    color: #92929d;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Alert:before {
+    content: "\e900";
+}
+
+.icon-Approve:before {
+    content: "\e901";
+}
+
+.icon-Behance .path1:before {
+    content: "\e902";
+}
+
+.icon-Behance .path2:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-Browse:before {
+    content: "\e904";
+}
+
+.icon-BrowseImage:before {
+    content: "\e905";
+}
+
+.icon-Category:before {
+    content: "\e906";
+}
+
+.icon-Dialogue:before {
+    content: "\e907";
+}
+
+.icon-Dislike:before {
+    content: "\e908";
+    color: #909090;
+}
+
+.icon-Docs:before {
+    content: "\e909";
+    color: #2a5799;
+}
+
+.icon-Download:before {
+    content: "\e90a";
+}
+
+.icon-Dribble .path1:before {
+    content: "\e90b";
+}
+
+.icon-Dribble .path2:before {
+    content: "\e90c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-Expand:before {
+    content: "\e90d";
+    color: #999;
+}
+
+.icon-Contribute:before {
+    content: "\e90e";
+}
+
+.icon-Facebook .path1:before {
+    content: "\e90f";
+}
+
+.icon-Facebook .path2:before {
+    content: "\e910";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-Favorites:before {
+    content: "\e911";
+}
+
+.icon-Files:before {
+    content: "\e912";
+}
+
+.icon-Filter:before {
+    content: "\e913";
+}
+
+.icon-History .path1:before {
+    content: "\e914";
+    color: rgb(2, 187, 212);
+}
+
+.icon-History .path2:before {
+    content: "\e915";
+    margin-left: -1em;
+    color: rgb(2, 187, 211);
+}
+
+.icon-History .path3:before {
+    content: "\e916";
+    margin-left: -1em;
+    color: rgb(0, 188, 211);
+}
+
+.icon-History .path4:before {
+    content: "\e917";
+    margin-left: -1em;
+    color: rgb(5, 4, 5);
+}
+
+.icon-Home:before {
+    content: "\e918";
+}
+
+.icon-Language:before {
+    content: "\e919";
+    color: #ffc106;
+}
+
+.icon-Like:before {
+    content: "\e91a";
+    color: #909090;
+}
+
+.icon-ListView:before {
+    content: "\e91b";
+}
+
+.icon-Love:before {
+    content: "\e91c";
+}
+
+.icon-Maths:before {
+    content: "\e91d";
+    color: #4caf4f;
+}
+
+.icon-Mylearning:before {
+    content: "\e91e";
+}
+
+.icon-PDF:before {
+    content: "\e91f";
+    color: #d31d04;
+}
+
+.icon-Science:before {
+    content: "\e920";
+    color: #4050b5;
+}
+
+.icon-TileView:before {
+    content: "\e921";
+}
+
+.icon-Tip .path1:before {
+    content: "\e922";
+    color: rgb(100, 222, 226);
+}
+
+.icon-Tip .path2:before {
+    content: "\e923";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path3:before {
+    content: "\e924";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path4:before {
+    content: "\e925";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path5:before {
+    content: "\e926";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path6:before {
+    content: "\e927";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path7:before {
+    content: "\e928";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path8:before {
+    content: "\e929";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path9:before {
+    content: "\e92a";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path10:before {
+    content: "\e92b";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path11:before {
+    content: "\e92c";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path12:before {
+    content: "\e92d";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path13:before {
+    content: "\e92e";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path14:before {
+    content: "\e92f";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Tip .path15:before {
+    content: "\e930";
+    margin-left: -0.9375em;
+    color: rgb(34, 34, 34);
+}
+
+.icon-Topics:before {
+    content: "\e931";
+}
+
+.icon-Twitter .path1:before {
+    content: "\e932";
+}
+
+.icon-Twitter .path2:before {
+    content: "\e933";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-Upload:before {
+    content: "\e934";
+    color: #909090;
+}
+
+.icon-View:before {
+    content: "\e935";
+}
+
+.icon-Voice:before {
+    content: "\e936";
+    color: #717171;
+}

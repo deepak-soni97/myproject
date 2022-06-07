@@ -1,0 +1,51 @@
+.banner-caption h1{
+  font-size: 2.5rem;
+  font-weight:600;
+}
+.banner{
+  height: 34.0625rem;
+  overflow: hidden;
+  position: relative;
+}
+.banner-caption {
+  z-index: 2;
+  max-width: 59.375rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  /* -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); */
+}
+.w-responsive {
+  width:75%;
+}
+
+.rounded-left {
+  border-top-left-radius: .25rem!important;
+  border-bottom-left-radius: .25rem!important;
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  border-color: #d7d7d7;
+  background-color: #d7d7d7;
+  color: #444;
+}
+.input-group-append .btn, .input-group-prepend .btn {
+  position: relative;
+  z-index: 2;
+}
+.btn.disabled, .btn:disabled {
+  opacity: .65;
+}
+.banner1{
+  overflow: hidden;
+  position: absolute;
+  top:50%;
+   width:100%;
+}
+.fas.fa-search.position-absolute.search-icon{
+  top: 20px !important;
+  left: 20px !important;
+}
+
+

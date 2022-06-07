@@ -1,0 +1,25 @@
+<mat-carousel timings="250ms ease-in" [autoplay]="true" color="accent" maxWidth="auto" [loop]="true" [hideArrows]="true"
+  [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr" [proportion]="40"
+  [maintainAspectRatio]="true">
+
+  <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image"
+    overlayColor="#00000040" [hideOverlay]="false">
+
+  </mat-carousel-slide>
+
+</mat-carousel>
+<div class="banner1">
+  <div class="banner-caption text-center position-relative">
+    <h1 class="text-white text-semibold">What would you learn today?</h1>
+      <div class="input-group md-form w-responsive mx-auto">
+        <input (keydown.enter)="onTagClick()" class="form-control pr-4 pl-5 py-3 border-0 bg-white rounded-left" 
+          [(ngModel)]="newListItem" type="text" placeholder="Find your topic" aria-label="Search"><i
+          class="fas fa-search position-absolute search-icon"></i>
+        <div class="input-group-append">
+          <button class="btn btn-primary m-0" (click)="onTagClick()"  [disabled]="newListItem.length < 3" type="button">Search</button>
+        </div>
+      </div>
+   
+
+  </div>
+</div>

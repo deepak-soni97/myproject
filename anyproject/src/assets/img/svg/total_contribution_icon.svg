@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 25 Copy 2</title>
+    <defs>
+        <path d="M18.6666667,6 L18.6666667,1.33333333 C18.6666667,0.6 18.0666667,0 17.3333333,0 L1.33333333,0 C0.6,0 0,0.6 0,1.33333333 L0,14.6666667 C0,15.4 0.6,16 1.33333333,16 L17.3333333,16 C18.0666667,16 18.6666667,15.4 18.6666667,14.6666667 L18.6666667,10 L24,15.3333333 L24,0.666666667 L18.6666667,6 Z" id="path-1"></path>
+        <polygon id="path-3" points="18.6666667 6 18.6666667 10 24 15.3333333 24 0.666666667"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-25-Copy-2" transform="translate(0.750000, 0.298201)">
+            <g id="Group-32">
+                <rect id="Rectangle-Copy-19" fill="#C8F7F5" x="0" y="0" width="52" height="52" rx="8"></rect>
+                <g id="Group-27" transform="translate(14.500000, 18.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Path" fill="#1BC5BD" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Path-Copy" fill="#9FE8E5" fill-rule="nonzero" xlink:href="#path-3"></use>
+                </g>
+            </g>
+            <g id="noun_Add-Video_1425328" transform="translate(20.500000, 23.500000)" stroke="#C8F7F5" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.761904762">
+                <line x1="2.95966667" y1="0.0396666667" x2="2.95966667" y2="4.864" id="Path"></line>
+                <line x1="5.372" y1="2.45166667" x2="0.547666667" y2="2.45166667" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg>

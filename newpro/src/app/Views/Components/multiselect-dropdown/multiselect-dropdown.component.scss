@@ -1,0 +1,23 @@
+::ng-deep {
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+        color: #333;
+        background-color: white !important;
+    }
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected .ng-option-label{
+        width: 90%;
+    }
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected .ng-option-label::after {
+        content: "";
+        display: inline-block;
+        width: 0.5em;
+        position: absolute;
+        right: 20px;
+        height: 0.9em;
+        border-style: solid;
+        border-width: 0 0.1em 0.1em 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        color: #004996;
+    }
+}

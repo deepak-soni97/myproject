@@ -1,0 +1,362 @@
+<main class="form-validate">
+    <!-- Breadcrumbs start -->
+    <div class="breadcrumbs-wrap" ng-cloak>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col breadcrumbs">
+                    <ul id="breadcrumb" class="breadcrumb">
+                        <li><a href="" [routerLink]="['/home']">home</a>
+                        </li>
+                        <li class="d-flex">
+                            <a class="mr-2" *ngFor="let item of (vm.model?.topicCurriculumn||[]); let i = index">
+                                <small (click)="onTagClick(item.title)"> {{item.title}}</small>
+                                {{i< vm.model.topicCurriculumn.length-1?',':''}} </a>
+                                    <!-- [queryParams]="{'stxt':item.Title}"-->
+                        </li>
+                        <li class="d-flex">
+                            <!-- <a *ngFor="let item of vm.model.Topic_Subjects; let i = index" href=""
+                                [routerLink]="[_WebConfig.PagesName.SearchPage]" [queryParams]="{'stxt':item.Title}"
+                                class="mr-2">
+                                {{item.Title}}
+                                {{i< vm.model.Topic_Subjects.length-1?',':''}} </a> -->
+                            <a *ngFor="let item of (vm.model?.topicSubject||[]); let i = index" class="mr-2">
+                                <small (click)="onTagClick(item.title)"> {{item.title}}</small>
+                                {{i< vm.model.topicSubject.length-1?',':''}} </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs end -->
+
+    <div class="container-fluid">
+        <div class="row no-gutter">
+
+            <div class="col-lg-8 col-md-8 col-12 p-0">
+
+                <div class="topic-header">
+                    <div class="topic-banner">
+                        <img src="{{vm.model?.bannerimageurl}}" class="img-fluid ng-cloak" [attr.alt]="">
+                        <div class="topic-ratings position-absolute d-flex align-items-center">
+                            <app-star-rating  [readonly]="false" (rating)="setRating($event)"
+                                [initialStars]="userRatingStars">
+                            </app-star-rating>
+                            <span class="badge badge-warning ml-2 ml-sm-4 px-2 topic-level ng-cloak">
+                                {{vm.model?.topicLevel}}
+                            </span>
+                        </div>
+                        <a href="{{vm.EditableUrl}}" class="topic-edit-btn ng-cloak" *ngIf="vm.EnableActivation">
+                            <span class="text-semibold text-dark small">Edit</span></a>
+                        <a href="{{vm.EditableUrl}}" class="topic-edit-btn ng-cloak" *ngIf="!vm.EnableActivation">
+                            <span class="text-semibold text-dark small">Copy</span></a>
+                    </div>
+                    <div class="topic-detail-info px-5 mt-n5 d-block d-md-flex">
+                        <div class="userAvatar-3x position-relative">
+                            <ng-container *ngIf="(vm.model?.topicSubject||[]).length>0">
+                                <img src="{{vm.model.topicSubject[0]?.iconurl}}"
+                                    alt="{{vm.model.topicSubject[0]?.title}}"
+                                    title="{{vm.model.topicSubject[0]?.title}}">
+                            </ng-container>
+
+                        </div>
+                        <div class="topic-details mt-2 mt-md-5 ml-0 ml-md-4 flex-1">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-12 ng-cloak">
+                                    <h3 class="mt-2 mb-0 ng-cloak" [textContent]="vm.model?.title"></h3>
+                                    <h6 class="m-0 text-black-50 font-small ng-cloak">By:
+                                        <a style="cursor: pointer;" [routerLink]="['/Private/teacher-profile']"
+                                            [queryParams]="{ id:  vm.model?.createdbyuserid }"
+                                            (click)="createdbyuserfullname(vm.model?.createdbyuserid)">{{vm.model?.createdbyuserfullname}}</a>
+                                        |
+                                        {{getDate(vm.model?.publishedOn||vm.model?.modifiedOn).split(',')[0]}}
+                                        {{CompletionDurationText()}}
+                                    </h6>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-between align-items-center topic-meta">
+                                    <p class="text-medium mt-2 mb-3 ng-cloak">
+                                        <i class="fas fa-star mr-1 text-warning"></i>
+                                        <span class="text-bold mr-1">{{vm.averageRating}}</span> <span
+                                            class="font-small text-regular"> Average Rating </span>
+                                        <span class="text-bold mr-1">({{vm.ratingCount}})</span><span
+                                            class="font-small text-regular"> </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- topic stats start -->
+                    <div
+                        class="topic-stats px-5 d-flex justify-content-between align-items-center border-top border-bottom">
+                        <div class="video-stats">
+                            <a>
+                                <i style="color: #004996 !important;" class="fas fa-eye mr-1"></i>
+                                <span class="text-semibold text-dark ng-cloak">{{vm.viewCount}}</span>
+                            </a>
+                            <a class="mx-4">
+                                <i class="icon-Dialogue mr-1"></i>
+                                <span class="text-semibold text-dark ng-cloak">{{vm.commentCount}}</span>
+                            </a>
+                        </div>
+                        <a (click)="ToggleActivateStatus()" [ngClass]="vm.model.isActive ==
+                            true ?'btn-danger ml-1 btn btn-sm':'btn-success ml-1 btn btn-sm'"
+                            *ngIf="vm.EnableActivation">
+                            <span class="text-semibold text-white small">
+                                {{vm.model.isActive?'Deactivate':'Activate'}}
+
+                            </span></a>
+                        <div class="video-stats">
+                            <a (click)="likeTopic()" class=" mr-4">
+                                <i [ngClass]="vm.liked==true?'liked':''" class="fas fa-thumbs-up mr-1"></i>
+                                <span class="text-semibold text-dark">{{vm.likeCount}}</span>
+                            </a>
+
+                            <app-share-topic [TopicDetail]="vm.model" [ShareCount]="vm.shareCount"></app-share-topic>
+                            <a (click)="favoriteThisTopic()">
+                                <i [ngClass]="vm.favorite==true?'liked':''" class="fas fa-bookmark mr-1"></i>
+                                <span class="text-semibold text-dark small ng-cloak">{{vm.favorite?'SAVED':'SAVE'}}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- topic stats end -->
+                </div>
+
+
+                <ng-template #shareDialog>
+                    <div mat-dialog-content>
+                        this is the content
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <!--  
+                       <button class="btn btn-primary" [disabled]="formCreation.dirty && formCreation.errors"
+                          (click)="save(true)">Save</button>
+                 
+                 
+                       <button (click)="save(false)" class="btn btn-danger">Cancel</button> -->
+
+                    </div>
+                </ng-template>
+
+                <div class="bs-example">
+                    <div class="accordion" id="curriculum-details">
+                        <div class="card">
+                            <div class="card-header accordion-topic-header" id="headingOne">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link" data-toggle="collapse"
+                                            data-target="#collapseOne">Program Details
+                                        </button>
+                                    </h2>
+                                    <img src="https://gemsedu.sharepoint.com/sites/Edupedia-QA/Style%20Library/Assets/Edupedia.SP/img/svg/arrow-up.svg"
+                                        [attr.alt]="'arrow-up'" id="arrow-up" class="arrow-up" data-toggle="collapse"
+                                        data-target="#collapseOne">
+                                </div>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#curriculum-details">
+                                <div class="card-body pt-0">
+                                    <div class="topic-tags px-5 border-top">
+                                        <div class="row border-bottom align-items-center py-3">
+                                            <div class="col-lg-3 col-md-3 col-12 heading-font">Programs</div>
+                                            <div class="col-lg-9 col-md-9 col-12">
+                                                <div class="overflow-auto">
+                                                    <a *ngFor="let item of (vm.model?.topicCurriculumn||[])"
+                                                        [routerLink]="['/',_WebConfig.PagesName.SearchPage]"
+                                                        [queryParams]="{'stext':item.title}"
+                                                        class="badge badge-pill border py-2 px-3 mr-2 my-1 text-medium topic-tag"
+                                                        [textContent]="item.title"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row border-bottom py-3">
+                                            <div class="col-lg-3 col-md-3 col-12">Grade</div>
+                                            <div class="col-lg-9 col-md-9 col-12">
+                                                <div class="overflow-auto">
+                                                    <a *ngFor="let item of (vm.model?.topicGrades||[])" href=""
+                                                        [routerLink]="['/',_WebConfig.PagesName.SearchPage]"
+                                                        [queryParams]="{'stext':item.gradename}"
+                                                        class="badge badge-pill border py-2 px-3 mr-2 my-1 text-medium topic-tag"
+                                                        [textContent]="item.gradename"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row border-bottom py-3">
+                                            <div class="col-lg-3 col-md-3 col-12">Subject</div>
+                                            <div class="col-lg-9 col-md-9 col-12">
+                                                <div class="overflow-auto">
+                                                    <a *ngFor="let item of (vm.model?.topicSubject||[])"
+                                                        [routerLink]="['/',_WebConfig.PagesName.SearchPage]"
+                                                        [queryParams]="{'stext':item.title}"
+                                                        class="badge badge-pill border py-2 px-3 mr-2 my-1 text-medium topic-tag"
+                                                        [textContent]="item.title">5</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row border-bottom py-3">
+                                            <div class="col-lg-3 col-md-3 col-12">Course</div>
+                                            <div class="col-lg-9 col-md-9 col-12">
+                                                <div class="overflow-auto">
+                                                    <a *ngFor="let item of (vm.model?.topicCourses||[])"
+                                                        [routerLink]="['/',_WebConfig.PagesName.SearchPage]"
+                                                        [queryParams]="{'stext':item.courseName}"
+                                                        class="badge badge-pill border py-2 px-3 mr-2 my-1 text-medium topic-tag"
+                                                        [textContent]="item.courseName">Geometry</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row py-3  border-bottom">
+                                            <div class="col-lg-3 col-md-3 col-12">Tags</div>
+                                            <div class="col-lg-9 col-md-9 col-12">
+                                                <div class="overflow-auto">
+                                                    <a *ngFor="let item of (vm.model?.topicTags||[])"
+                                                        [routerLink]="['/',_WebConfig.PagesName.SearchPage]"
+                                                        [queryParams]="{'stext':item.Title}"
+                                                        class="badge badge-pill border py-2 px-3 mr-2 my-1 text-medium topic-tag"
+                                                        [textContent]="item.tagName">Grade
+                                                        10</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="pb-3 pt-3"
+                                            *ngIf="vm.model?.learningoutcomesList && vm.model?.learningoutcomesList?.length>0">
+                                            <h5 class="text-medium">Learning Outcomes</h5>
+                                            <ul class="objectives">
+                                                <li *ngFor="let outcome of vm.model.learningoutcomesList"
+                                                    [textContent]="outcome.outcome"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- topic tags end -->
+
+
+
+
+                <!-- Description -->
+                <div class="px-5 pt-4 pb-3">
+                    <h5 class="text-medium">Description</h5>
+                    <p class="text-dark" [textContent]="vm.model?.description"></p>
+                </div>
+                <!-- end Description -->
+
+                <div class="px-5 pt-4 pb-3"
+                    *ngIf="vm.model?.externalReferences && vm.model?.externalReferences?.length > 0">
+                    <h5 class="text-medium">External References</h5>
+
+                    <ul class="objectives" *ngFor="let extContent of vm.model.externalReferences">
+                        <li class="text-truncate ng-scope"><a target="_blank"
+                                href="{{extContent.externalreference}}">{{extContent.externalreference}}</a></li>
+                    </ul>
+                </div>
+                <!-- attachments -->
+                <h5 class="text-medium mt-3 ml-5">Attachments</h5>
+                <div id="topic-resources" class="topic-resources overflow-auto px-5 border-bottom">
+
+                    <app-existing-attachment (onViewFileEmitter)="viewAttachmentClick($event)" [showInList]="true"
+                        [ExistingTopicAttachments]="(vm.model?.TopicAttachments||[])">
+                    </app-existing-attachment>
+
+                </div>
+
+                <!-- comment section start -->
+                <div class="col-12 pt-2 pb-2" *ngIf="selectedFileForViewer">
+                    <div class="d-flex justify-content-end">
+                        <h4 class="btn btn-outline-danger" (click)="closeViewer()">X</h4>
+                    </div>
+                    <app-file-viwer-page [fileName]="selectedFileForViewer"></app-file-viwer-page>
+                </div>
+
+                <!-- end attachments -->
+
+
+                <!-- comment section start -->
+                <app-topic-comment-list [topicId]="this.vm.TopicId"></app-topic-comment-list>
+                <!-- end comment section start -->
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12 bg-light p-0">
+                <h6 class="related-topics text-uppercase text-semibold m-0 py-2 px-3 border-bottom">Related Topics</h6>
+                <div class="p-3 border-top">
+                    <div *ngFor="let topic of relatedTopicsList?.results" class="card other-video-card mb-3"
+                        style="cursor: pointer;" (click)="gotoTopicDetail(topic.ID)">
+                        <app-recommended-topics [topic]="topic"></app-recommended-topics>
+                    </div>
+
+                </div>
+
+                <h6 class="related-topics text-uppercase text-semibold m-0 py-2 px-3 border-bottom border-top">
+                    Recommended Topics</h6>
+                <div class="p-3 border-top">
+                    <div *ngFor="let topic of recommandedTopicList?.results" class="card other-video-card mb-3"
+                        style="cursor: pointer;" (click)="gotoTopicDetail(topic.ID)">
+                        <app-recommended-topics [topic]="topic"></app-recommended-topics>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="px-5 pt-4 pb-3">
+                    <h5 class="text-medium">{{vm.model?.createdbyuserfullname}}'s Contributions</h5>
+
+                    <div class="row mt-4">
+                        <owl-carousel-o [options]="customOptions">
+                            <ng-container *ngFor="let item of TeacherTopicsList?.results">
+                                <ng-template carouselSlide [id]="item.id.toString()">
+                                    <app-topic-search-card [topic]="item"></app-topic-search-card>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+
+                    </div>
+                    <nav ng-if="vm.numOfPages>1" id="pagination" aria-label="Page navigation"
+                        class="mt-4 simple-pagination"></nav>
+
+                </div>
+            </div> -->
+
+
+            <section
+                class="section-padding bg-white popular-topics explore-topic-section  overflow-hidden topic-section section-color-chng">
+                <div class="px-5 pt-4 pb-3">
+                    <h5 class="text-medium">{{vm.model?.createdbyuserfullname}}'s Contributions</h5>
+                </div>
+                <div class="container-fluid">
+
+                    <div class="row Popularloaded">
+
+                        <div class="col-12">
+                            <div class="row" *ngIf="showPopularPreloader" style="margin-left:60px; margin-right:60px;">
+                                <app-loader-card class="col"></app-loader-card>
+                                <app-loader-card class="col"></app-loader-card>
+                                <app-loader-card class="col"></app-loader-card>
+                                <app-loader-card class="col"></app-loader-card>
+                            </div>
+                            <owl-carousel-o [options]="customOptions" *ngIf="!showPopularPreloader">
+                                <ng-container *ngFor="let item of TeacherTopicsList?.results">
+                                    <ng-template carouselSlide [id]="item.id.toString()">
+                                        <app-topic-search-card [topic]="item"></app-topic-search-card>
+                                    </ng-template>
+                                </ng-container>
+                            </owl-carousel-o>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+</main>
